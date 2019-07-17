@@ -7,11 +7,19 @@
 //
 
 import Foundation
+enum EnterpriseType
+{
+    case Restaurant, Store, MegaMart
+}
 class Enterprise : DisplayDelegate
 {
-    private static var _enterpriseID:Int
+    private static var _enterpriseID:Int = 0
     var enterpriseID:Int
     var enterpriseName:String
     var address:String
     var enterpriseType:EnterpriseType
+    var products:[Products]
+    var employees:[Employees]
+    
+    init()
 }
