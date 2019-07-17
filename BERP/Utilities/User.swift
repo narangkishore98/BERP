@@ -24,12 +24,13 @@ class User:DisplayDelegate
     private var password:String
     var address:String
     
-    init(email:String, password:String, address:String)
+    init(fullName:String, email:String, password:String, address:String)
     {
         self.email = email
         self.password = password
         self.address = address
         User._userID += 1
+        self.fullName = fullName
         self.userID = User._userID
     }
     
