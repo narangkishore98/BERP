@@ -30,8 +30,8 @@ class User:DisplayDelegate
         self.password = password
         self.address = address
         User._userID += 1
-        self.fullName = fullName
         self.userID = User._userID
+        self.fullName = fullName
     }
     
     func doLogin(withEmail email :String, password:String) -> Bool
