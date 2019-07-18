@@ -24,11 +24,33 @@ class ViewController: UIViewController {
     
     @IBAction func actionLogin(_ sender: Any)
     {
-        
+        let myEmail : String = self.txtEmail.text!
+        let myPassword : String = self.txtPassword.text!
+        if (EmptyValidation(email: myEmail, password: myPassword) == false)
+        {
+            //Email and Password fields not empty ->has value
+            
+        }
+        else
+        {
+            //Email and Password Fields Left empty by user and clicked on Login
+            showMyAlertMessage(title: "Message", message: "Email and Password are Empty.. Try Again", btnTitle: "Ok")
+        }
     }
     @IBAction func actionRegister(_ sender: Any)
     {
         
+    }
+    
+    //validation to check if user left email and password empty and directly clicked on Login -> to prevent crash
+    func EmptyValidation(email : String , password : String) -> Bool
+    {
+        if (email.isEmpty && password.isEmpty)
+        {
+            //Email and password fields are left Empty by User
+            return true
+        }
+        return false
     }
     
     // Remember Me Code -> User Default
@@ -48,7 +70,7 @@ class ViewController: UIViewController {
         switchRememberMe.setOn(true, animated: true)
     }
     
-    //Function Made for Custom Alert Action 
+    //Function Made for Custom Alert Action
     public func showMyAlertMessage(title : String , message : String , btnTitle : String)
     {
         let alertControl = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -60,7 +82,7 @@ class ViewController: UIViewController {
     //Un Wind used for Logout from any screen
     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
     {
-        _ = storyboardSegue.source as! AboutUsViewController  // just temporary code -> Change Later
+        let s = storyboardSegue.source as! AboutUsViewController  // just temporary code -> Change Later
         if(switchRememberMe.isOn)
         {
             getRememberMeValues()
