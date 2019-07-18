@@ -18,7 +18,7 @@ class Discount:DisplayDelegate
         
         """
     }
-    
+    private static var _discountID:Int = 0
     var discountID : Int
     var discountName : String
     var discountCode : String
@@ -27,6 +27,7 @@ class Discount:DisplayDelegate
     
     init(discountID: Int, discountName: String, discountCode: String ,discountPercent: Float)
     {
+        Discount._discountID += 1
         self.discountID = discountID
         self.discountName = discountName
         self.discountCode = discountCode

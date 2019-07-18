@@ -18,12 +18,12 @@ class Order
     {
         set
         {
-            totalPrice = totalPrice - (totalPrice * newValue / 100 )
+            totalPrice = totalPrice - (totalPrice * newValue!.discountPercent / 100 )
             
         }
         get
         {
-            return newValue
+            return self.discount
         }
     }
     var totalPrice:Float = 0
