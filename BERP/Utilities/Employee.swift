@@ -10,10 +10,17 @@ import Foundation
 class Employee:User
 {
     var points:Int = 0
+   
     var workingIn:Enterprise!
     func addPoints(value:Int)
     {
         points += value
+    }
+    func makeOrder(products:[Product], discount:Discount?)
+    {
+        let order = Order(products: products, madeBy: self, discount: discount)
+        workingIn.addOrder(order: order)
+        points += workingIn.bonusMultiplier * 10
     }
     
     

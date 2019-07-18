@@ -27,6 +27,7 @@ class Enterprise : DisplayDelegate
     var enterpriseID:Int
     var enterpriseName:String
     var address:String
+    var bonusMultiplier:Int = 0
     var enterpriseType:EnterpriseType
     var products:[Product]
     var employees:[Employee]
@@ -52,6 +53,18 @@ class Enterprise : DisplayDelegate
     {
         return employees
     }
+    func addProduct(product:Product)
+    {
+        self.products.append(product)
+    }
+    func getAllProducts() -> [Product]
+    {
+        return products
+    }
+    func getProducts(startingWith:String) -> [Product]
+    {
+        return products // this we have to change [Kishore]
+    }
     func getEmployee(withEmail:String) -> Employee?
     {
         for employee in employees
@@ -62,6 +75,14 @@ class Enterprise : DisplayDelegate
             }
         }
         return nil
+    }
+    func addOrder(order:Order)
+    {
+        orders.append(order)
+    }
+    func getAllOrders() -> [Order]
+    {
+        return orders
     }
     
 }

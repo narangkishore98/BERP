@@ -34,9 +34,9 @@ class User:DisplayDelegate
         self.fullName = fullName
     }
     
-    func doLogin(withEmail email :String, password:String) -> Bool
+    func doLogin(password:String) -> Bool
     {
-        return self.email == email ? (self.password == password ?  true : false) : false
+        return (self.password == password ?  true : false) 
     }
     
 }
