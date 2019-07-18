@@ -28,8 +28,8 @@ class ViewController: UIViewController {
         let myPassword : String = self.txtPassword.text!
         if (EmptyValidation(email: myEmail, password: myPassword) == false)
         {
-            //Email and Password fields not empty ->has value
-            
+            //Email and Password fields not empty ->it has value
+            if(myEmail.valid)
         }
         else
         {

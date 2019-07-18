@@ -2,7 +2,7 @@
 //  AboutUsViewController.swift
 //  BERP
 //
-//  Created by admin on 2019-07-18.
+//  Created by Das Tarlochan Preet Singh on 2019-07-18.
 //  Copyright © 2019 Bikloo. All rights reserved.
 //
 
