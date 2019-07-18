@@ -15,4 +15,14 @@ extension String
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: Str)
     }
+    
+    public func isValidPassword() -> Bool
+    {
+        // at least one uppercase,
+        // at least one digit
+        // at least one lowercase
+        // 8 characters total
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}")
+        return passwordTest.evaluate(with: self)
+    }
 }
