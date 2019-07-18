@@ -10,13 +10,22 @@ import UIKit
 import WebKit
 class AboutUsViewController: UIViewController {
     @IBOutlet weak var wkWebView: WKWebView!
+    var contactUsUrlString : String? // url for contact us
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
+        loadFromUrl()
         // Do any additional setup after loading the view.
     }
     
+    //load from url function to load the url in the web view
+    func loadFromUrl()
+    {
+        let url = URL(string: contactUsUrlString!)
+        let urlRequest = URLRequest(url: url!)
+        self.wkWebView.load(urlRequest)
+    }
 
     /*
     // MARK: - Navigation
