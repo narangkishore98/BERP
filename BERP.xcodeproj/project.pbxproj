@@ -16,6 +16,7 @@
 		2E826B0022DFE84500B4735D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826AFF22DFE84500B4735D /* User.swift */; };
 		2E826B0222DFEAF900B4735D /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B0122DFEAF900B4735D /* Owner.swift */; };
 		2E826B0422DFEB5D00B4735D /* Enterprise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B0322DFEB5D00B4735D /* Enterprise.swift */; };
+		84F6698622DFF261005E92B4 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6698522DFF261005E92B4 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2E826AFF22DFE84500B4735D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		2E826B0122DFEAF900B4735D /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		2E826B0322DFEB5D00B4735D /* Enterprise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enterprise.swift; sourceTree = "<group>"; };
+		84F6698522DFF261005E92B4 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				2E826AF022DFE6F000B4735D /* Assets.xcassets */,
 				2E826AF222DFE6F000B4735D /* LaunchScreen.storyboard */,
 				2E826AF522DFE6F000B4735D /* Info.plist */,
+				84F6698522DFF261005E92B4 /* AboutUsViewController.swift */,
 			);
 			path = BERP;
 			sourceTree = "<group>";
@@ -165,6 +168,7 @@
 			files = (
 				2E826B0022DFE84500B4735D /* User.swift in Sources */,
 				2E826AEC22DFE6EF00B4735D /* ViewController.swift in Sources */,
+				84F6698622DFF261005E92B4 /* AboutUsViewController.swift in Sources */,
 				2E826AFD22DFE81100B4735D /* DisplayDelegate.swift in Sources */,
 				2E826B0222DFEAF900B4735D /* Owner.swift in Sources */,
 				2E826B0422DFEB5D00B4735D /* Enterprise.swift in Sources */,
