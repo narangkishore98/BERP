@@ -13,6 +13,7 @@ class Order
     var orderID:Int
     var dateTime:Date
     var products:[Product]
+    var orderMadeBy:Employee
     var discount:Discount?
     {
         set
@@ -26,7 +27,7 @@ class Order
         }
     }
     var totalPrice:Float = 0
-    init(products:[Product], discount:Discount?)
+    init(products:[Product],  madeBy:Employee, discount:Discount?)
     {
         self.products = products
         self.dateTime = Date()
@@ -36,5 +37,6 @@ class Order
         {
             self.totalPrice += product.price
         }
+        self.orderMadeBy = madeBy
     }
 }
