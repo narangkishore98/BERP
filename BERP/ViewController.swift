@@ -24,17 +24,61 @@ class ViewController: UIViewController {
     
     @IBAction func actionLogin(_ sender: Any)
     {
-        let myEmail : String = self.txtEmail.text!
-        let myPassword : String = self.txtPassword.text!
-        if (EmptyValidation(email: myEmail, password: myPassword) == false)
+        let mytxtEmail : String = self.txtEmail.text!
+        let mytxtPassword : String = self.txtPassword.text!
+        if (EmptyValidation(email: mytxtEmail, password: mytxtPassword) == false)
         {
-            //Email and Password fields not empty ->it has value
-            if(myEmail.valid)
+            //Email and Password fields not empty -> it has value
+            if(mytxtEmail.isValidEmail() == true)
+            {
+                //Email is Valid
+                //if let password = MyDataStore.usersDict[myEmail]
+                if let password : String = "pass" // temporary valid password of user in database
+                {
+                    let email : String = "admin@admin.com" // temporary valid email of user in database
+                    //User Exist in Database
+                    if (password == mytxtPassword)
+                    {
+                        //Password Correct Entered By User
+                        //Remember Me code for user Default
+                        let userDefault = UserDefaults.standard
+                        if switchRememberMe.isOn
+                        {
+                            
+                            userDefault.setValue(txtEmail.text, forKey: "userEmail")
+                            userDefault.set(txtPassword.text, forKey: "userPassword")
+                        }
+                        else
+                        {
+                            userDefault.removeObject(forKey: "userEmail")
+                            userDefault.removeObject(forKey: "userPassword")
+                        }
+                        //Everthing Correct -> Show Alert
+                        showMyAlertMessage(title: "Message", message: "Details Correctly Entered", btnTitle: "Ok")
+                        // TO BE CHANGED MODIFIED LATER
+                    }
+                    else
+                    {
+                        //Invalid Password Entered By User
+                        showMyAlertMessage(title: "Error", message: "Invalid Password Entered.. Try Again.", btnTitle: "Ok")
+                    }
+                }
+                else
+                {
+                    //User Doesnt Exist
+                    showMyAlertMessage(title: "Error", message: "No User Exist With Specified Email.. try Again.", btnTitle: "Ok")
+                }
+            }
+            else
+            {
+                //Email is Not Valid
+                showMyAlertMessage(title: "Error", message: "Invalid Email Entered.. Try Again", btnTitle: "Ok")
+            }
         }
         else
         {
             //Email and Password Fields Left empty by user and clicked on Login
-            showMyAlertMessage(title: "Message", message: "Email and Password are Empty.. Try Again", btnTitle: "Ok")
+            showMyAlertMessage(title: "Error", message: "Email and Password Fields are Empty.. Try Again", btnTitle: "Ok")
         }
     }
     @IBAction func actionRegister(_ sender: Any)
@@ -50,7 +94,10 @@ class ViewController: UIViewController {
             //Email and password fields are left Empty by User
             return true
         }
-        return false
+        else
+        {
+            return false
+        }
     }
     
     // Remember Me Code -> User Default

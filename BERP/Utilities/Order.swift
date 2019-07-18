@@ -14,6 +14,7 @@ class Order
     var dateTime:Date
     var products:[Product]
     var orderMadeBy:Employee
+    /*
     var discount:Discount?
     {
         set
@@ -26,6 +27,8 @@ class Order
             return newValue
         }
     }
+
+ */
     var totalPrice:Float = 0
     init(products:[Product],  madeBy:Employee, discount:Discount?)
     {
