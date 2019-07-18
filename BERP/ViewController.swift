@@ -47,5 +47,22 @@ class ViewController: UIViewController {
         }
         switchRememberMe.setOn(true, animated: true)
     }
+    
+    
+    //Un Wind used for Logout from any screen
+    @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
+    {
+        _ = storyboardSegue.source as! AboutUsViewController  // just temporary code -> Change Later
+        if(switchRememberMe.isOn)
+        {
+            getRememberMeValues()
+        }
+        else
+        {
+            txtPassword.text = ""
+            txtEmail.text = ""
+        }
+        print("Logout")
+    }
 }
 
