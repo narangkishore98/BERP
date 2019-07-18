@@ -48,7 +48,15 @@ class ViewController: UIViewController {
         switchRememberMe.setOn(true, animated: true)
     }
     
-    
+    //Function Made for Custom Alert Action 
+    public func showMyAlertMessage(title : String , message : String , btnTitle : String)
+    {
+        let alertControl = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let actionButton = UIAlertAction(title: btnTitle, style: .default, handler: nil)
+        alertControl.addAction(actionButton)
+        self .present(alertControl , animated: true , completion: nil)
+    }
+
     //Un Wind used for Logout from any screen
     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
     {
