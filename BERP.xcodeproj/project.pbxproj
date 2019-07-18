@@ -20,6 +20,7 @@
 		2E826B0F22DFF54900B4735D /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B0E22DFF54900B4735D /* Employee.swift */; };
 		2E826B1122DFF8C200B4735D /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B1022DFF8C200B4735D /* Order.swift */; };
 		CEFB89DD22DFF1D400F0B344 /* CurrencyExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB89DC22DFF1D400F0B344 /* CurrencyExtension.swift */; };
+		CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB89DE22DFF86B00F0B344 /* Discount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		2E826B0E22DFF54900B4735D /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 		2E826B1022DFF8C200B4735D /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		CEFB89DC22DFF1D400F0B344 /* CurrencyExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExtension.swift; sourceTree = "<group>"; };
+		CEFB89DE22DFF86B00F0B344 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				2E826B0A22DFF16F00B4735D /* Product.swift */,
 				2E826B0E22DFF54900B4735D /* Employee.swift */,
 				2E826B1022DFF8C200B4735D /* Order.swift */,
+				CEFB89DE22DFF86B00F0B344 /* Discount.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				2E826B0F22DFF54900B4735D /* Employee.swift in Sources */,
 				2E826B1122DFF8C200B4735D /* Order.swift in Sources */,
 				2E826AEC22DFE6EF00B4735D /* ViewController.swift in Sources */,
+				CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */,
 				2E826AFD22DFE81100B4735D /* DisplayDelegate.swift in Sources */,
 				2E826B0222DFEAF900B4735D /* Owner.swift in Sources */,
 				2E826B0422DFEB5D00B4735D /* Enterprise.swift in Sources */,
