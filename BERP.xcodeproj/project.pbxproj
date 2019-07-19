@@ -27,6 +27,7 @@
 		2E826B2022E1E8C200B4735D /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B1F22E1E8C200B4735D /* DoubleExtension.swift */; };
 		2E826B2722E1EC7D00B4735D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E826B2622E1EC7D00B4735D /* WebKit.framework */; };
 		2E826B2922E2063500B4735D /* Owners.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E826B2822E2063500B4735D /* Owners.plist */; };
+		8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60422E2476B0010FB6F /* ContactUsViewController.swift */; };
 		84F6698822E0D542005E92B4 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6698722E0D542005E92B4 /* InstructionsViewController.swift */; };
 		CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB89DE22DFF86B00F0B344 /* Discount.swift */; };
 /* End PBXBuildFile section */
@@ -54,6 +55,7 @@
 		2E826B1F22E1E8C200B4735D /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		2E826B2622E1EC7D00B4735D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		2E826B2822E2063500B4735D /* Owners.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Owners.plist; sourceTree = "<group>"; };
+		8451F60422E2476B0010FB6F /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		84F6698722E0D542005E92B4 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		CEFB89DE22DFF86B00F0B344 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 			children = (
 				2E826AEB22DFE6EF00B4735D /* LoginViewController.swift */,
 				84F6698722E0D542005E92B4 /* InstructionsViewController.swift */,
+				8451F60422E2476B0010FB6F /* ContactUsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				2E826AFD22DFE81100B4735D /* DisplayDelegate.swift in Sources */,
 				2E826B1E22E1E88A00B4735D /* FloatExtension.swift in Sources */,
 				2E826B0222DFEAF900B4735D /* Owner.swift in Sources */,
+				8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */,
 				2E826B0422DFEB5D00B4735D /* Enterprise.swift in Sources */,
 				2E826AEA22DFE6EF00B4735D /* AppDelegate.swift in Sources */,
 				2E826B1C22E1E74A00B4735D /* StringExtension.swift in Sources */,
