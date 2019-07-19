@@ -25,10 +25,9 @@
 		2E826B1C22E1E74A00B4735D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B1B22E1E74A00B4735D /* StringExtension.swift */; };
 		2E826B1E22E1E88A00B4735D /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B1D22E1E88A00B4735D /* FloatExtension.swift */; };
 		2E826B2022E1E8C200B4735D /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B1F22E1E8C200B4735D /* DoubleExtension.swift */; };
+		2E826B2722E1EC7D00B4735D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E826B2622E1EC7D00B4735D /* WebKit.framework */; };
 		84F6698822E0D542005E92B4 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6698722E0D542005E92B4 /* InstructionsViewController.swift */; };
 		84F6698E22E0E980005E92B4 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F6698D22E0E980005E92B4 /* UserInfo.plist */; };
-		CE54FFC122E1375A00525994 /* ExtensionFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54FFC022E1375A00525994 /* ExtensionFloat.swift */; };
-		CE54FFC322E1380F00525994 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54FFC222E1380F00525994 /* ExtensionString.swift */; };
 		CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB89DE22DFF86B00F0B344 /* Discount.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,10 +52,9 @@
 		2E826B1B22E1E74A00B4735D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2E826B1D22E1E88A00B4735D /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 		2E826B1F22E1E8C200B4735D /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		2E826B2622E1EC7D00B4735D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		84F6698722E0D542005E92B4 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		84F6698D22E0E980005E92B4 /* UserInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
-		CE54FFC022E1375A00525994 /* ExtensionFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFloat.swift; sourceTree = "<group>"; };
-		CE54FFC222E1380F00525994 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		CEFB89DE22DFF86B00F0B344 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E826B2722E1EC7D00B4735D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +75,7 @@
 			children = (
 				2E826AE822DFE6EF00B4735D /* BERP */,
 				2E826AE722DFE6EF00B4735D /* Products */,
+				2E826B2522E1EC7C00B4735D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -136,6 +136,14 @@
 				2E826B1522E1520D00B4735D /* logo.png */,
 			);
 			path = HtmlData;
+			sourceTree = "<group>";
+		};
+		2E826B2522E1EC7C00B4735D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E826B2622E1EC7D00B4735D /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CEFB89DB22DFF11E00F0B344 /* Extensions */ = {
@@ -225,10 +233,9 @@
 				2E826B2022E1E8C200B4735D /* DoubleExtension.swift in Sources */,
 				2E826B0022DFE84500B4735D /* User.swift in Sources */,
 				2E826B1322E0161200B4735D /* DataStore.swift in Sources */,
-				CE54FFC122E1375A00525994 /* ExtensionFloat.swift in Sources */,
 				2E826B0F22DFF54900B4735D /* Employee.swift in Sources */,
 				2E826B1122DFF8C200B4735D /* Order.swift in Sources */,
-				2E826AEC22DFE6EF00B4735D /* ViewController.swift in Sources */,
+				2E826AEC22DFE6EF00B4735D /* LoginViewController.swift in Sources */,
 				84F6698822E0D542005E92B4 /* InstructionsViewController.swift in Sources */,
 				CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */,
 				2E826AFD22DFE81100B4735D /* DisplayDelegate.swift in Sources */,

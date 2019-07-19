@@ -25,7 +25,7 @@ class InstructionsViewController: UIViewController, WKUIDelegate, WKNavigationDe
     //load from url function to load the url in the web view
     func loadFromFile()
     {
-        let url = Bundle.main.url(forResource: "instructions", withExtension: "html", subdirectory: "HtmlData")
+        let url = Bundle.main.url(forResource: "instructions", withExtension: "html")
         wkWebView.loadFileURL(url!, allowingReadAccessTo: url!)
         let request = URLRequest(url: url!)
         wkWebView.load(request)
