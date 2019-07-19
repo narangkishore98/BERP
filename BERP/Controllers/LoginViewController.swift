@@ -38,7 +38,9 @@ class LoginViewController: UIViewController {
                 {
                     if owner.doLogin(password: mytxtPassword)
                     {
-                        var ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
+                        let ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
+                        let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "ownerHomeVC")
+                        self.present(ownerHomeVC, animated: true)
                     }
                     else
                     {

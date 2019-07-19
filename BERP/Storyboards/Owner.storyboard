@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Owner Home View Controller-->
+        <scene sceneID="CgO-is-ggp">
+            <objects>
+                <viewController storyboardIdentifier="ownerHomeVC" id="6xF-Sb-SBn" customClass="OwnerHomeViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GRc-LW-PeW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZN-KB-FRj">
+                                <rect key="frame" x="0.0" y="30" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Owner - Home" id="rHH-n0-Gxd">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="eHj-0n-tKS">
+                                            <connections>
+                                                <segue destination="FrF-ed-NhK" kind="unwind" unwindAction="unWindLogoutFromAnyScreenWithStoryboardSegue:" id="cXt-Qd-Pzc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="as6-uT-aN8">
+                                <rect key="frame" x="0.0" y="74" width="414" height="822"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is owner view home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RfX-YC-eQi">
+                                        <rect key="frame" x="113" y="84" width="188" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="RfX-YC-eQi" secondAttribute="trailing" constant="113" id="K3u-M1-ESY"/>
+                                    <constraint firstItem="RfX-YC-eQi" firstAttribute="top" secondItem="as6-uT-aN8" secondAttribute="top" constant="84" id="ZTd-qt-tsr"/>
+                                    <constraint firstItem="RfX-YC-eQi" firstAttribute="leading" secondItem="as6-uT-aN8" secondAttribute="leading" constant="113" id="nbb-VC-PPe"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="krq-z0-Ofk"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xv6-5q-U2P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FrF-ed-NhK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-37.681159420289859" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+</document>
