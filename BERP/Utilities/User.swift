@@ -7,6 +7,10 @@
 //
 
 import Foundation
+enum UserType
+{
+    case Owner,Employee
+}
 class User:DisplayDelegate
 {
     func display() -> String {
@@ -22,9 +26,10 @@ class User:DisplayDelegate
     var email:String
     var fullName:String
     private var password:String
+    var userType:UserType
     var address:String
     
-    init(fullName:String, email:String, password:String, address:String)
+    init(fullName:String, email:String, password:String, address:String, userType:UserType)
     {
         self.email = email
         self.password = password
@@ -32,6 +37,7 @@ class User:DisplayDelegate
         User._userID += 1
         self.userID = User._userID
         self.fullName = fullName
+        self.userType = userType
     }
     
     func doLogin(password:String) -> Bool
