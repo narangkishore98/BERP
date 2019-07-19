@@ -129,7 +129,7 @@ class ViewController: UIViewController {
     //Un Wind used for Logout from any screen
     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
     {
-        let s = storyboardSegue.source as! AboutUsViewController  // just temporary code -> Change Later
+        let s = storyboardSegue.source as! InstructionsViewController  // just temporary code -> Change Later
         if(switchRememberMe.isOn)
         {
             getRememberMeValues()

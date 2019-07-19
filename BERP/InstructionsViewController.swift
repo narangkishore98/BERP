@@ -8,24 +8,27 @@
 
 import UIKit
 import WebKit
-class AboutUsViewController: UIViewController
+class InstructionsViewController: UIViewController, WKUIDelegate, WKNavigationDelegate
 {
     @IBOutlet weak var wkWebView: WKWebView!
-    var contactUsUrlString : String? // url for contact us
+
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        loadFromUrl()
+        loadFromFile()
+        wkWebView.uiDelegate = self
+        wkWebView.navigationDelegate = self
         // Do any additional setup after loading the view.
     }
     
     //load from url function to load the url in the web view
-    func loadFromUrl()
+    func loadFromFile()
     {
-        let url = URL(string: contactUsUrlString!)
-        let urlRequest = URLRequest(url: url!)
-        self.wkWebView.load(urlRequest)
+        let url = Bundle.main.url(forResource: "instructions", withExtension: "html", subdirectory: "HtmlData")
+        wkWebView.loadFileURL(url!, allowingReadAccessTo: url!)
+        let request = URLRequest(url: url!)
+        wkWebView.load(request)
     }
     
     /*
