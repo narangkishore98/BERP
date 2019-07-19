@@ -6,6 +6,26 @@
 	<array>
 		<dict>
 			<key>email</key>
+			<string>ashishsharma161991@gmail.com</string>
+			<key>password</key>
+			<string>ashish</string>
+			<key>address</key>
+			<string>100 Mornelle Court, #1049, Scarborough ON, M1E 4X2</string>
+			<key>fullName</key>
+			<string>Ashish Sharma</string>
+		</dict>
+		<dict>
+			<key>email</key>
+			<string>meghna4joshi@gmail.com</string>
+			<key>password</key>
+			<string>meghna</string>
+			<key>address</key>
+			<string>100 Mornelle Court, #1049, Scarborough ON, M1E 4X2</string>
+			<key>fullName</key>
+			<string>Meghna Joshi</string>
+		</dict>
+		<dict>
+			<key>email</key>
 			<string>narangkishore98@gmail.com</string>
 			<key>password</key>
 			<string>kishore</string>

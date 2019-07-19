@@ -18,6 +18,8 @@ class LoginViewController: UIViewController {
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        //DataStore.readOwnersFromPlist()
+        //print(DataStore.owners)
     }
 
 
@@ -31,7 +33,25 @@ class LoginViewController: UIViewController {
             //Email and Password fields not empty -> it has value
             if(mytxtEmail.isValidEmail() == true)
             {
-                //Email is Valid
+                
+                if let owner = DataStore.owners[mytxtEmail]
+                {
+                    if owner.doLogin(password: mytxtPassword)
+                    {
+                        var ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
+                    }
+                    else
+                    {
+                        //invalid password
+                        //create an action alert here.
+                    }
+                }
+                else
+                {
+                    //user does not exist.
+                    //create an action alert here.
+                }
+                /*//Email is Valid
                 //if let password = MyDataStore.usersDict[myEmail]
                 if let password : String = "pass" // temporary valid password of user in database
                 {
@@ -68,12 +88,15 @@ class LoginViewController: UIViewController {
                     //User Doesnt Exist
                     showMyAlertMessage(title: "Error", message: "No User Exist With Specified Email.. try Again.", btnTitle: "Ok")
                 }
+            */
             }
+ 
             else
             {
                 //Email is Not Valid
                 showMyAlertMessage(title: "Error", message: "Invalid Email Entered.. Try Again", btnTitle: "Ok")
             }
+ 
         }
         else
         {

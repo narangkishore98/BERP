@@ -90,17 +90,15 @@
 		2E826AE822DFE6EF00B4735D /* BERP */ = {
 			isa = PBXGroup;
 			children = (
+				2E826B2B22E210FC00B4735D /* Storyboards */,
+				2E826B2A22E210E000B4735D /* Controllers */,
 				2E826B1A22E1524A00B4735D /* HtmlData */,
 				CEFB89DB22DFF11E00F0B344 /* Extensions */,
 				2E826AFE22DFE83200B4735D /* Utilities */,
 				2E826AFB22DFE7FF00B4735D /* Delegates */,
 				2E826AE922DFE6EF00B4735D /* AppDelegate.swift */,
-				2E826AEB22DFE6EF00B4735D /* LoginViewController.swift */,
-				2E826AED22DFE6EF00B4735D /* Main.storyboard */,
 				2E826AF022DFE6F000B4735D /* Assets.xcassets */,
-				2E826AF222DFE6F000B4735D /* LaunchScreen.storyboard */,
 				2E826AF522DFE6F000B4735D /* Info.plist */,
-				84F6698722E0D542005E92B4 /* InstructionsViewController.swift */,
 				2E826B2822E2063500B4735D /* Owners.plist */,
 			);
 			path = BERP;
@@ -144,6 +142,24 @@
 				2E826B2622E1EC7D00B4735D /* WebKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E826B2A22E210E000B4735D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E826AEB22DFE6EF00B4735D /* LoginViewController.swift */,
+				84F6698722E0D542005E92B4 /* InstructionsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2E826B2B22E210FC00B4735D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				2E826AED22DFE6EF00B4735D /* Main.storyboard */,
+				2E826AF222DFE6F000B4735D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		CEFB89DB22DFF11E00F0B344 /* Extensions */ = {
