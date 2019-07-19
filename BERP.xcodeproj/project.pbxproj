@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E826AEA22DFE6EF00B4735D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826AE922DFE6EF00B4735D /* AppDelegate.swift */; };
-		2E826AEC22DFE6EF00B4735D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826AEB22DFE6EF00B4735D /* ViewController.swift */; };
+		2E826AEC22DFE6EF00B4735D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826AEB22DFE6EF00B4735D /* LoginViewController.swift */; };
 		2E826AEF22DFE6EF00B4735D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E826AED22DFE6EF00B4735D /* Main.storyboard */; };
 		2E826AF122DFE6F000B4735D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E826AF022DFE6F000B4735D /* Assets.xcassets */; };
 		2E826AF422DFE6F000B4735D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E826AF222DFE6F000B4735D /* LaunchScreen.storyboard */; };
@@ -27,13 +27,15 @@
 		2E826B2022E1E8C200B4735D /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B1F22E1E8C200B4735D /* DoubleExtension.swift */; };
 		84F6698822E0D542005E92B4 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6698722E0D542005E92B4 /* InstructionsViewController.swift */; };
 		84F6698E22E0E980005E92B4 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F6698D22E0E980005E92B4 /* UserInfo.plist */; };
+		CE54FFC122E1375A00525994 /* ExtensionFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54FFC022E1375A00525994 /* ExtensionFloat.swift */; };
+		CE54FFC322E1380F00525994 /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE54FFC222E1380F00525994 /* ExtensionString.swift */; };
 		CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB89DE22DFF86B00F0B344 /* Discount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2E826AE622DFE6EF00B4735D /* BERP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BERP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E826AE922DFE6EF00B4735D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E826AEB22DFE6EF00B4735D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E826AEB22DFE6EF00B4735D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		2E826AEE22DFE6EF00B4735D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E826AF022DFE6F000B4735D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E826AF322DFE6F000B4735D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,6 +55,8 @@
 		2E826B1F22E1E8C200B4735D /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		84F6698722E0D542005E92B4 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		84F6698D22E0E980005E92B4 /* UserInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
+		CE54FFC022E1375A00525994 /* ExtensionFloat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFloat.swift; sourceTree = "<group>"; };
+		CE54FFC222E1380F00525994 /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		CEFB89DE22DFF86B00F0B344 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +95,7 @@
 				2E826AFE22DFE83200B4735D /* Utilities */,
 				2E826AFB22DFE7FF00B4735D /* Delegates */,
 				2E826AE922DFE6EF00B4735D /* AppDelegate.swift */,
-				2E826AEB22DFE6EF00B4735D /* ViewController.swift */,
+				2E826AEB22DFE6EF00B4735D /* LoginViewController.swift */,
 				2E826AED22DFE6EF00B4735D /* Main.storyboard */,
 				2E826AF022DFE6F000B4735D /* Assets.xcassets */,
 				2E826AF222DFE6F000B4735D /* LaunchScreen.storyboard */,
@@ -221,6 +225,7 @@
 				2E826B2022E1E8C200B4735D /* DoubleExtension.swift in Sources */,
 				2E826B0022DFE84500B4735D /* User.swift in Sources */,
 				2E826B1322E0161200B4735D /* DataStore.swift in Sources */,
+				CE54FFC122E1375A00525994 /* ExtensionFloat.swift in Sources */,
 				2E826B0F22DFF54900B4735D /* Employee.swift in Sources */,
 				2E826B1122DFF8C200B4735D /* Order.swift in Sources */,
 				2E826AEC22DFE6EF00B4735D /* ViewController.swift in Sources */,

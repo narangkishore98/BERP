@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
     @IBOutlet weak var txtEmail: UITextField!
     
     @IBOutlet weak var btnLogin: UIButton!
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     {
         let mytxtEmail : String = self.txtEmail.text!
         let mytxtPassword : String = self.txtPassword.text!
-        if (EmptyValidation(email: mytxtEmail, password: mytxtPassword) == false)
+        if (emptyValidation(email: mytxtEmail, password: mytxtPassword) == false)
         {
             //Email and Password fields not empty -> it has value
             if(mytxtEmail.isValidEmail() == true)
@@ -87,7 +87,7 @@ class ViewController: UIViewController {
     }
     
     //validation to check if user left email and password empty and directly clicked on Login -> to prevent crash
-    func EmptyValidation(email : String , password : String) -> Bool
+    func emptyValidation(email : String , password : String) -> Bool
     {
         if (email.isEmpty && password.isEmpty)
         {
