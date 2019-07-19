@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //DataStore.readOwnersFromPlist()
-        //print(DataStore.owners)
+        DataStore.readOwnersFromPlist()
+        print(DataStore.owners)
     }
 
 
@@ -46,12 +46,14 @@ class LoginViewController: UIViewController {
                     {
                         //invalid password
                         //create an action alert here.
+                        print("User Invalid Password")
                     }
                 }
                 else
                 {
                     //user does not exist.
                     //create an action alert here.
+                    print("User Doesnot exist")
                 }
                 /*//Email is Valid
                 //if let password = MyDataStore.usersDict[myEmail]

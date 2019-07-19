@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZN-KB-FRj">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jZN-KB-FRj">
                                 <rect key="frame" x="0.0" y="30" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Owner - Home" id="rHH-n0-Gxd">
                                         <barButtonItem key="leftBarButtonItem" title="Logout" id="eHj-0n-tKS">
@@ -49,6 +48,12 @@
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="as6-uT-aN8" firstAttribute="top" secondItem="jZN-KB-FRj" secondAttribute="bottom" id="DvR-VY-JbW"/>
+                            <constraint firstItem="as6-uT-aN8" firstAttribute="trailing" secondItem="krq-z0-Ofk" secondAttribute="trailing" id="POJ-Zp-Rve"/>
+                            <constraint firstItem="as6-uT-aN8" firstAttribute="leading" secondItem="krq-z0-Ofk" secondAttribute="leading" id="YPA-Kc-EQ4"/>
+                            <constraint firstAttribute="bottom" secondItem="as6-uT-aN8" secondAttribute="bottom" id="vjP-9H-Y6C"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="krq-z0-Ofk"/>
                     </view>
                 </viewController>
