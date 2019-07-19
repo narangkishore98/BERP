@@ -26,8 +26,8 @@
 		2E826B1E22E1E88A00B4735D /* FloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B1D22E1E88A00B4735D /* FloatExtension.swift */; };
 		2E826B2022E1E8C200B4735D /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B1F22E1E8C200B4735D /* DoubleExtension.swift */; };
 		2E826B2722E1EC7D00B4735D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E826B2622E1EC7D00B4735D /* WebKit.framework */; };
+		2E826B2922E2063500B4735D /* Owners.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E826B2822E2063500B4735D /* Owners.plist */; };
 		84F6698822E0D542005E92B4 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6698722E0D542005E92B4 /* InstructionsViewController.swift */; };
-		84F6698E22E0E980005E92B4 /* UserInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84F6698D22E0E980005E92B4 /* UserInfo.plist */; };
 		CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB89DE22DFF86B00F0B344 /* Discount.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +53,8 @@
 		2E826B1D22E1E88A00B4735D /* FloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtension.swift; sourceTree = "<group>"; };
 		2E826B1F22E1E8C200B4735D /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		2E826B2622E1EC7D00B4735D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		2E826B2822E2063500B4735D /* Owners.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Owners.plist; sourceTree = "<group>"; };
 		84F6698722E0D542005E92B4 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
-		84F6698D22E0E980005E92B4 /* UserInfo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = UserInfo.plist; sourceTree = "<group>"; };
 		CEFB89DE22DFF86B00F0B344 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -101,7 +101,7 @@
 				2E826AF222DFE6F000B4735D /* LaunchScreen.storyboard */,
 				2E826AF522DFE6F000B4735D /* Info.plist */,
 				84F6698722E0D542005E92B4 /* InstructionsViewController.swift */,
-				84F6698D22E0E980005E92B4 /* UserInfo.plist */,
+				2E826B2822E2063500B4735D /* Owners.plist */,
 			);
 			path = BERP;
 			sourceTree = "<group>";
@@ -218,8 +218,8 @@
 				2E826B1622E1520D00B4735D /* instructions.html in Resources */,
 				2E826B1722E1520D00B4735D /* logo.png in Resources */,
 				2E826AF122DFE6F000B4735D /* Assets.xcassets in Resources */,
+				2E826B2922E2063500B4735D /* Owners.plist in Resources */,
 				2E826AEF22DFE6EF00B4735D /* Main.storyboard in Resources */,
-				84F6698E22E0E980005E92B4 /* UserInfo.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

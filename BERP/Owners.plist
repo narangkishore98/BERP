@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>owners</key>
+	<array>
+		<dict>
+			<key>email</key>
+			<string>narangkishore98@gmail.com</string>
+			<key>password</key>
+			<string>kishore</string>
+			<key>address</key>
+			<string>100 Mornelle Court, #1049, Scarborough  ON, M1E 4X2</string>
+			<key>fullName</key>
+			<string>Kishore Narang</string>
+		</dict>
+	</array>
+</dict>
+</plist>

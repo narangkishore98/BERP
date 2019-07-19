@@ -9,17 +9,10 @@
 import Foundation
 class DataStore
 {
-    static var owners:[Owner] = [Owner]()
-    static func getOwnerByEmail(_ email:String) -> Owner?
+    static var owners:[String:Owner] = [String:Owner]()
+    static func readOwnersFromPlist()
     {
-        for owner in owners
-        {
-            if owner.email == email
-            {
-                return owner
-            }
-        }
-        return nil
+    
     }
     
 }
