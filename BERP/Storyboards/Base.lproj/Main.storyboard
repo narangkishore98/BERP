@@ -158,6 +158,9 @@
                                 <state key="normal" title="Call">
                                     <color key="titleColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <connections>
+                                    <action selector="actionCall:" destination="W5c-3s-Me2" eventType="touchUpInside" id="VQe-Cg-ajl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Gv-js-yG7">
                                 <rect key="frame" x="55" y="418" width="63" height="52"/>
