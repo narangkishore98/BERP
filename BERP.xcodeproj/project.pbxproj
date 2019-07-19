@@ -29,6 +29,7 @@
 		2E826B2922E2063500B4735D /* Owners.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E826B2822E2063500B4735D /* Owners.plist */; };
 		8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60422E2476B0010FB6F /* ContactUsViewController.swift */; };
 		8451F60722E24C1F0010FB6F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60622E24C1F0010FB6F /* EmailViewController.swift */; };
+		8451F60922E257C90010FB6F /* SmsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60822E257C90010FB6F /* SmsCallViewController.swift */; };
 		84F6698822E0D542005E92B4 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6698722E0D542005E92B4 /* InstructionsViewController.swift */; };
 		CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB89DE22DFF86B00F0B344 /* Discount.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,7 @@
 		2E826B2822E2063500B4735D /* Owners.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Owners.plist; sourceTree = "<group>"; };
 		8451F60422E2476B0010FB6F /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		8451F60622E24C1F0010FB6F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		8451F60822E257C90010FB6F /* SmsCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCallViewController.swift; sourceTree = "<group>"; };
 		84F6698722E0D542005E92B4 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		CEFB89DE22DFF86B00F0B344 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -155,6 +157,7 @@
 				84F6698722E0D542005E92B4 /* InstructionsViewController.swift */,
 				8451F60422E2476B0010FB6F /* ContactUsViewController.swift */,
 				8451F60622E24C1F0010FB6F /* EmailViewController.swift */,
+				8451F60822E257C90010FB6F /* SmsCallViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 				2E826AFD22DFE81100B4735D /* DisplayDelegate.swift in Sources */,
 				2E826B1E22E1E88A00B4735D /* FloatExtension.swift in Sources */,
 				2E826B0222DFEAF900B4735D /* Owner.swift in Sources */,
+				8451F60922E257C90010FB6F /* SmsCallViewController.swift in Sources */,
 				8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */,
 				2E826B0422DFEB5D00B4735D /* Enterprise.swift in Sources */,
 				2E826AEA22DFE6EF00B4735D /* AppDelegate.swift in Sources */,
