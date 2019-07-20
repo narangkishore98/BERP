@@ -32,7 +32,15 @@ class RegisterViewController: UIViewController {
         else
         {
             //Empty validation Passed successfully 😏
-            
+            if(txtEmail.text!.isValidEmail())
+            {
+                //Email entered is Valid 😏
+            }
+            else
+            {
+                //Email entered is Not Valid ☹️
+                showMyAlertMessage(title: "Error", message: "Email Entered is Not a Valid Email Address.. Please Try Again.", btnTitle: "Ok")
+            }
         }
     }
     
