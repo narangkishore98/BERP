@@ -76,7 +76,10 @@ class AddEnterpriseViewController: UIViewController, UIPickerViewDelegate, UIPic
     {
         if(txtEType.text == "" || txtEName.text == "" || txtEAddress.text == "")
         {
-            //show alert here
+            let alertController = UIAlertController(title: "Error", message: "Please Fill All the values.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(action)
+            self.present(alertController, animated: true)
         }
         else
         {
@@ -85,6 +88,7 @@ class AddEnterpriseViewController: UIViewController, UIPickerViewDelegate, UIPic
             let delegate = UIApplication.shared.delegate as! AppDelegate
             let owner = delegate.loggedInOwner
             owner?.addEnterprise(enterprise: enterprise)
+            self.navigationController?.popViewController(animated: true)
             
         }
     }
