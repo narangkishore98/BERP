@@ -56,7 +56,7 @@ class LoginViewController: UIViewController {
                         }
                         
                         let ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
-                        let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "ownerHomeVC")
+                        let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "startFromOwnerVC")
                         self.present(ownerHomeVC, animated: true)
                        
                     }

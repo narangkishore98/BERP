@@ -19,6 +19,7 @@ class AddEnterpriseViewController: UIViewController, UIPickerViewDelegate, UIPic
         return 3
     }
     
+
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch row {
         case 0:
@@ -32,6 +33,7 @@ class AddEnterpriseViewController: UIViewController, UIPickerViewDelegate, UIPic
         }
     }
     
+
 
     var owner:Owner?
     @IBOutlet weak var txtEName: UITextField!
@@ -62,10 +64,10 @@ class AddEnterpriseViewController: UIViewController, UIPickerViewDelegate, UIPic
         txtEType.inputAccessoryView = toolBar
         
         
-        
-        self.navigationItem.title = "Add Enterprise"
+
         
         let addEnterpriseDone = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(addEnterpriseDoneAction))
+        
         self.navigationItem.rightBarButtonItem = addEnterpriseDone
         // Do any additional setup after loading the view.
         

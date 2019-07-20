@@ -17,6 +17,7 @@ class OwnerHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeMenuOptions.count
     }
+    @IBOutlet weak var navbar: UINavigationItem!
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblMenu.dequeueReusableCell(withIdentifier: "cellForMenuOptions")!
@@ -44,7 +45,7 @@ class OwnerHomeViewController: UIViewController, UITableViewDelegate, UITableVie
             let addEnterpriseVC = storyboard.instantiateViewController(withIdentifier: "addEnterpriseVC")
             print("HELLO")
         
-           self.present(addEnterpriseVC, animated: true)
+           self.navigationController?.pushViewController(addEnterpriseVC, animated: true)
         default:
             print("Nothing is being done here")
         }
@@ -59,6 +60,7 @@ class OwnerHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         let delegate = UIApplication.shared.delegate as? AppDelegate
         owner = delegate?.loggedInOwner
         lblWelcome.text = "Welcome, \(delegate!.loggedInOwner!.fullName)"
+   
         // Do any additional setup after loading the view.
     }
     
