@@ -42,7 +42,16 @@ class RegisterViewController: UIViewController {
                     //Password is Strong 🤠
                     //All Validations Passed Now creeate the Owner
                     DataStore.owners.updateValue(Owner(fullName: txtFullName.text!, email: txtEmail.text!, password: txtPassword.text!, address: txtFullAddress.text!), forKey: txtEmail.text!)
-                    showMyAlertMessage(title: "Success", message: "Registration Successful..", btnTitle: "Ok")
+                    //showMyAlertMessage(title: "Success", message: "Registration Successful..", btnTitle: "Ok")
+                    let alertControl = UIAlertController(title: "Success", message: "Registration Successful..", preferredStyle: .alert)
+                    let actionOk = UIAlertAction(title: "Ok", style: .default, handler:
+                    {
+                        _ -> Void in
+                        self.dismiss(animated: true, completion: {})
+                        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+                    })
+                    alertControl.addAction(actionOk)
+                    self .present(alertControl , animated: true , completion: nil)
                 }
                 else
                 {
@@ -64,6 +73,12 @@ class RegisterViewController: UIViewController {
         let actionButton = UIAlertAction(title: btnTitle, style: .default, handler: nil)
         alertControl.addAction(actionButton)
         self .present(alertControl , animated: true , completion: nil)
+    }
+    
+    @IBAction func actionGoToHome(_ sender: Any)
+    {
+        self.dismiss(animated: true, completion: {})
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
     }
     /*
     // MARK: - Navigation

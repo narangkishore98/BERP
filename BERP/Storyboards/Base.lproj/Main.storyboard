@@ -141,6 +141,14 @@
                                             <action selector="actionSignUp:" destination="JLp-sD-nWf" eventType="touchUpInside" id="fG2-9e-Vwy"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQH-qD-W6t">
+                                        <rect key="frame" x="146" y="628" width="83" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                        <state key="normal" title="Go to Home"/>
+                                        <connections>
+                                            <action selector="actionGoToHome:" destination="JLp-sD-nWf" eventType="touchUpInside" id="85j-pw-MR6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="GKE-Ce-ruW" secondAttribute="bottom" constant="579" id="JNv-Op-cEA"/>
