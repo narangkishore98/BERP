@@ -63,7 +63,7 @@
                                 <state key="normal" title="Dont Have Account ? Sign Up"/>
                                 <connections>
                                     <action selector="actionRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hbt-Cy-96Q"/>
-                                    <segue destination="fpz-Zw-AFD" kind="show" id="7AY-ni-i0v"/>
+                                    <segue destination="JLp-sD-nWf" kind="show" id="RZF-Ox-lKG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -81,10 +81,10 @@
             </objects>
             <point key="canvasLocation" x="364" y="35"/>
         </scene>
-        <!--View Controller-->
+        <!--Register-->
         <scene sceneID="ouf-9D-oxe">
             <objects>
-                <viewController id="JLp-sD-nWf" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegisterVC" title="Register" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JLp-sD-nWf" customClass="RegisterViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fu7-h4-93O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,6 +135,9 @@
                                         <state key="normal" title="Sign Up">
                                             <color key="titleColor" name="selectedMenuItemTextColor" catalog="System" colorSpace="catalog"/>
                                         </state>
+                                        <connections>
+                                            <action selector="actionSignUp:" destination="JLp-sD-nWf" eventType="touchUpInside" id="fG2-9e-Vwy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -154,6 +157,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="udW-8m-Tnf"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmail" destination="Tol-lj-bsH" id="Iph-Vu-ZXX"/>
+                        <outlet property="txtFullAddress" destination="kwa-Ja-pTB" id="98r-Zy-qUL"/>
+                        <outlet property="txtFullName" destination="VDW-MM-CPc" id="wg3-jH-bgb"/>
+                        <outlet property="txtPassword" destination="6Ip-CO-l40" id="N8s-0l-haT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uI1-9x-qLV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
