@@ -35,15 +35,28 @@ class RegisterViewController: UIViewController {
             if(txtEmail.text!.isValidEmail())
             {
                 //Email entered is Valid 😏
+                //Now Password Validation
+                //Password must have at least one uppercase,at least one digit,at least one lowercase and must have atleast 8 characters
+                if(txtPassword.text!.isValidPassword())
+                {
+                    //Password is Strong 🤠
+                    //All Validations Passed Now creeate the Owner
+                    DataStore.owners.updateValue(Owner(fullName: txtFullName.text!, email: txtEmail.text!, password: txtPassword.text!, address: txtFullAddress.text!), forKey: txtEmail.text!)
+                    showMyAlertMessage(title: "Success", message: "Registration Successful..", btnTitle: "Ok")
+                }
+                else
+                {
+                    //Password is Weak 😕
+                    showMyAlertMessage(title: "Password Error", message: "Entered Password is Weak. Password must have at least one uppercase,one digit, one lowercase and must have atleast 8 characters", btnTitle: "Ok")
+                }
             }
             else
             {
                 //Email entered is Not Valid ☹️
-                showMyAlertMessage(title: "Error", message: "Email Entered is Not a Valid Email Address.. Please Try Again.", btnTitle: "Ok")
+                showMyAlertMessage(title: "Email Error", message: "Email Entered is Not a Valid Email Address.. Please Try Again.", btnTitle: "Ok")
             }
         }
     }
-    
     //Function Made for Custom Alert Action
     public func showMyAlertMessage(title : String , message : String , btnTitle : String)
     {
