@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController {
                 else
                 {
                     //Password is Weak 😕
-                    showMyAlertMessage(title: "Password Error", message: "Entered Password is Weak. Password must have at least one uppercase,one digit, one lowercase and must have atleast 8 characters", btnTitle: "Ok")
+                    showMyAlertMessage(title: "Password Error", message: "Entered Password is Weak.\n Password must have at least : \n - one uppercase character \n - one digit(0-9) \n - one lowercase character \n - must have atleast 8 characters", btnTitle: "Ok")
                 }
             }
             else
