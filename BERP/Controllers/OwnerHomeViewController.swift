@@ -11,6 +11,7 @@ import UIKit
 class OwnerHomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tblMenu: UITableView!
     var owner:Owner?
+  
     var homeMenuOptions = ["View My Enterprises", "Add New Enterprise","Delete Enterprise"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +35,16 @@ class OwnerHomeViewController: UIViewController, UITableViewDelegate, UITableVie
                 alert.addAction(actionButton)
                 self.present(alert, animated: true)
             }
+            else
+            {
+               
+            }
+        case 1:
+            let storyboard = UIStoryboard(name: "Owner", bundle: nil)
+            let addEnterpriseVC = storyboard.instantiateViewController(withIdentifier: "addEnterpriseVC")
+            print("HELLO")
+        
+           self.present(addEnterpriseVC, animated: true)
         default:
             print("Nothing is being done here")
         }
@@ -44,7 +55,7 @@ class OwnerHomeViewController: UIViewController, UITableViewDelegate, UITableVie
         super.viewDidLoad()
         tblMenu.delegate = self
         tblMenu.dataSource = self
-
+  
         let delegate = UIApplication.shared.delegate as? AppDelegate
         owner = delegate?.loggedInOwner
         lblWelcome.text = "Welcome, \(delegate!.loggedInOwner!.fullName)"

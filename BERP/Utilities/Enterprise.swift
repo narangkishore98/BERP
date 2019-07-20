@@ -27,7 +27,7 @@ class Enterprise : DisplayDelegate
     var enterpriseID:Int
     var enterpriseName:String
     var address:String
-    var bonusMultiplier:Int = 0
+    var bonusMultiplier:Int = 1
     var enterpriseType:EnterpriseType
     var products:[Product]
     var employees:[Employee]
