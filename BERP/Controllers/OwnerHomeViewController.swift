@@ -17,6 +17,7 @@ class OwnerHomeViewController: UIViewController, UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeMenuOptions.count
     }
+    
     @IBOutlet weak var navbar: UINavigationItem!
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -38,7 +39,11 @@ class OwnerHomeViewController: UIViewController, UITableViewDelegate, UITableVie
             }
             else
             {
-               
+                let storyboard = UIStoryboard(name: "Owner", bundle: nil)
+                let viewEnterpriseVC = storyboard.instantiateViewController(withIdentifier: "viewEnterpriseVC")
+                print("HELLO")
+                
+                self.navigationController?.pushViewController(viewEnterpriseVC, animated: true)
             }
         case 1:
             let storyboard = UIStoryboard(name: "Owner", bundle: nil)

@@ -10,14 +10,30 @@ import UIKit
 
 class ViewEnterpriseTableViewController: UITableViewController {
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.tableView.reloadData()
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationItem.title = "My Enterprises"
+        
+        let addBarButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(sendToAddEnterprise))
+        
+        self.navigationItem.rightBarButtonItem =  addBarButton
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    @objc func sendToAddEnterprise()
+    {
+        let storyboard = UIStoryboard(name: "Owner", bundle: nil)
+        let addEnterpriseVC = storyboard.instantiateViewController(withIdentifier: "addEnterpriseVC")
+        self.navigationController?.pushViewController(addEnterpriseVC, animated: true)
     }
 
     // MARK: - Table view data source
@@ -34,15 +50,15 @@ class ViewEnterpriseTableViewController: UITableViewController {
         return delegate.loggedInOwner!.getAllEnterprises().count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellForViewEnterprise", for: indexPath)
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        cell.textLabel!.text = delegate.loggedInOwner!.getAllEnterprises()[indexPath.row].enterpriseName
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

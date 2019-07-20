@@ -134,16 +134,16 @@
             </objects>
             <point key="canvasLocation" x="1878.2608695652175" y="119.86607142857142"/>
         </scene>
-        <!--Table View Controller-->
+        <!--View Enterprise Table View Controller-->
         <scene sceneID="9Oz-Cf-e52">
             <objects>
-                <tableViewController id="zab-sr-6FS" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="viewEnterpriseVC" id="zab-sr-6FS" customClass="ViewEnterpriseTableViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rQn-eG-r9n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1df-tx-uyJ">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellForViewEnterprise" id="1df-tx-uyJ">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1df-tx-uyJ" id="xNq-z8-AMa">
@@ -160,7 +160,35 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kNH-2h-JeJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1878" y="873"/>
+            <point key="canvasLocation" x="1878" y="1199"/>
+        </scene>
+        <!--Show Enterprise Detail View Controller-->
+        <scene sceneID="T4I-8x-qWf">
+            <objects>
+                <viewController storyboardIdentifier="showEnterpriseDetailVC" id="25z-Hn-FrJ" customClass="ShowEnterpriseDetailViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wfI-Qm-Pfu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enterprise Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fs7-Ry-ybH">
+                                <rect key="frame" x="20" y="109" width="374" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.04830961332" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="co3-68-dv1" firstAttribute="trailing" secondItem="Fs7-Ry-ybH" secondAttribute="trailing" constant="20" id="nJb-1O-o1z"/>
+                            <constraint firstItem="Fs7-Ry-ybH" firstAttribute="top" secondItem="co3-68-dv1" secondAttribute="top" constant="65" id="uYp-Ll-QB3"/>
+                            <constraint firstItem="Fs7-Ry-ybH" firstAttribute="leading" secondItem="co3-68-dv1" secondAttribute="leading" constant="20" id="vcN-Qd-CdX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="co3-68-dv1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qkS-UL-wbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2857.971014492754" y="1198.6607142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Akv-FW-X9Q">
