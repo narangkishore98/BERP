@@ -18,8 +18,8 @@ class LoginViewController: UIViewController {
     {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //DataStore.readOwnersFromPlist()
-        //print(DataStore.owners)
+        DataStore.readOwnersFromPlist()
+        print(DataStore.owners)
     }
 
 
@@ -38,18 +38,27 @@ class LoginViewController: UIViewController {
                 {
                     if owner.doLogin(password: mytxtPassword)
                     {
-                        var ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
+                        let delegate = UIApplication.shared.delegate as? AppDelegate
+                        delegate?.loggedInOwner = owner
+                        
+                        
+                        let ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
+                        let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "ownerHomeVC")
+                        self.present(ownerHomeVC, animated: true)
+                       
                     }
                     else
                     {
                         //invalid password
                         //create an action alert here.
+                        print("User Invalid Password")
                     }
                 }
                 else
                 {
                     //user does not exist.
                     //create an action alert here.
+                    print("User Doesnot exist")
                 }
                 /*//Email is Valid
                 //if let password = MyDataStore.usersDict[myEmail]
@@ -152,7 +161,7 @@ class LoginViewController: UIViewController {
     //Un Wind used for Logout from any screen
     @IBAction func unWindLogoutFromAnyScreen(storyboardSegue: UIStoryboardSegue)
     {
-        let s = storyboardSegue.source as! InstructionsViewController  // just temporary code -> Change Later
+        let s = storyboardSegue.source as! OwnerHomeViewController  // just temporary code -> Change Later
         if(switchRememberMe.isOn)
         {
             getRememberMeValues()
