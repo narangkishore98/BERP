@@ -41,6 +41,19 @@ class LoginViewController: UIViewController {
                         let delegate = UIApplication.shared.delegate as? AppDelegate
                         delegate?.loggedInOwner = owner
                         
+                        //Remember Me code for user Default
+                        let userDefault = UserDefaults.standard
+                        if switchRememberMe.isOn
+                        {
+                            
+                            userDefault.setValue(txtEmail.text, forKey: "userEmail")
+                            userDefault.set(txtPassword.text, forKey: "userPassword")
+                        }
+                        else
+                        {
+                            userDefault.removeObject(forKey: "userEmail")
+                            userDefault.removeObject(forKey: "userPassword")
+                        }
                         
                         let ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
                         let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "ownerHomeVC")
@@ -52,6 +65,7 @@ class LoginViewController: UIViewController {
                         //invalid password
                         //create an action alert here.
                         print("User Invalid Password")
+                        showMyAlertMessage(title: "Error", message: "Invalid Password", btnTitle: "Ok")
                     }
                 }
                 else
@@ -59,6 +73,7 @@ class LoginViewController: UIViewController {
                     //user does not exist.
                     //create an action alert here.
                     print("User Doesnot exist")
+                    showMyAlertMessage(title: "Error", message: "User Doesnt Exist.. Try Again.", btnTitle: "Ok")
                 }
                 /*//Email is Valid
                 //if let password = MyDataStore.usersDict[myEmail]

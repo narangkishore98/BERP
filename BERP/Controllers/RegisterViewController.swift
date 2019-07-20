@@ -26,10 +26,24 @@ class RegisterViewController: UIViewController {
         //Empty validation
         if (txtEmail.text!.isEmpty || txtPassword.text!.isEmpty || txtFullName.text!.isEmpty || txtFullAddress.text!.isEmpty)
         {
+            //Some fields are left empty by the user and he clicked Sign Up 😐
+            showMyAlertMessage(title: "Error", message: "Some Fields are Empty.. Please Fill all the Fields and Try Again..", btnTitle: "Ok")
+        }
+        else
+        {
+            //Empty validation Passed successfully 😏
             
         }
     }
     
+    //Function Made for Custom Alert Action
+    public func showMyAlertMessage(title : String , message : String , btnTitle : String)
+    {
+        let alertControl = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let actionButton = UIAlertAction(title: btnTitle, style: .default, handler: nil)
+        alertControl.addAction(actionButton)
+        self .present(alertControl , animated: true , completion: nil)
+    }
     /*
     // MARK: - Navigation
 
