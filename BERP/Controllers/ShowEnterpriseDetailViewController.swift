@@ -10,13 +10,23 @@ import UIKit
 
 class ShowEnterpriseDetailViewController: UIViewController {
 
+    @IBOutlet weak var txtEAddress: UILabel!
+    @IBOutlet weak var txtEName: UILabel!
+    @IBOutlet weak var txtEType: UILabel!
+    @IBOutlet weak var txtECount: UILabel!
+    @IBOutlet weak var txtMaxSale: UILabel!
+    @IBOutlet weak var txtEBonusMultiplier: UIButton!
+    @IBOutlet weak var txtDetailsFor: UILabel!
+    @IBOutlet weak var tblForMenu: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func btnBonusMultiplier(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
