@@ -21,6 +21,17 @@ class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Owner", bundle: nil)
+        switch  indexPath.row {
+        case 0:
+            let addEmployeeVC = storyboard.instantiateViewController(withIdentifier: "addEmployeeVC")
+            self.navigationController?.pushViewController(addEmployeeVC, animated: true)
+            
+        default:
+            print("Nothing to do here.")
+        }
+    }
 
     @IBOutlet weak var txtEAddress: UILabel!
     @IBOutlet weak var txtEName: UILabel!
@@ -50,6 +61,9 @@ class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate
         
         txtEBonusMultiplier.setTitle("\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)", for: .normal)
         // Do any additional setup after loading the view.
+    
+    
+        self.navigationItem.title = "Details"
     }
     
     @IBAction func btnBonusMultiplier(_ sender: Any) {
