@@ -30,7 +30,9 @@ class ShowEnterpriseDetailViewController: UIViewController {
         txtEAddress.text = "\(delegate.selectedEnterpriseForDetailByOwner!.address)"
         //txtEBonusMultiplier.currentTitle = "\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)"
         //txtEBonusMultiplier.titleLabel!.text = delegate.selectedEnterpriseForDetailByOwner?.bonusMultiplier
-        txtEBonusMultiplier.titleLabel!.text = "\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)"
+        //txtEBonusMultiplier.titleLabel!.text = "\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)"
+        
+        txtEBonusMultiplier.setTitle("\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)", for: .normal)
         // Do any additional setup after loading the view.
     }
     
@@ -45,7 +47,7 @@ class ShowEnterpriseDetailViewController: UIViewController {
             [weak alert] (_) in
             let delegate = UIApplication.shared.delegate as! AppDelegate
             delegate.selectedEnterpriseForDetailByOwner?.bonusMultiplier = Int((alert?.textFields![0].text! as? NSString)!.intValue)
-            self.txtEBonusMultiplier.titleLabel!.text = "\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)"
+            self.txtEBonusMultiplier.setTitle("\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)", for: .normal)
         }))
             self.present(alert, animated: true)
     }
