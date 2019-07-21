@@ -27,8 +27,10 @@ class ShowEnterpriseDetailViewController: UIViewController {
         txtEType.text = "\(delegate.selectedEnterpriseForDetailByOwner!.enterpriseType)"
         txtECount.text = "\(delegate.selectedEnterpriseForDetailByOwner!.employees.count)"
         txtMaxSale.text = "\(delegate.selectedEnterpriseForDetailByOwner!.getMaxIncome())"
+        txtEAddress.text = "\(delegate.selectedEnterpriseForDetailByOwner!.address)"
         //txtEBonusMultiplier.currentTitle = "\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)"
-        txtEBonusMultiplier.titleLabel!.text = delegate.selectedEnterpriseForDetailByOwner?.bonusMultiplier
+        //txtEBonusMultiplier.titleLabel!.text = delegate.selectedEnterpriseForDetailByOwner?.bonusMultiplier
+        txtEBonusMultiplier.titleLabel!.text = "\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)"
         // Do any additional setup after loading the view.
     }
     
@@ -43,7 +45,7 @@ class ShowEnterpriseDetailViewController: UIViewController {
             [weak alert] (_) in
             let delegate = UIApplication.shared.delegate as! AppDelegate
             delegate.selectedEnterpriseForDetailByOwner?.bonusMultiplier = Int((alert?.textFields![0].text! as? NSString)!.intValue)
-            txtEBonusMultiplier.titleLabel!.text = delegate.selectedEnterpriseForDetailByOwner?.bonusMultiplier
+            self.txtEBonusMultiplier.titleLabel!.text = "\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)"
         }))
             self.present(alert, animated: true)
     }
