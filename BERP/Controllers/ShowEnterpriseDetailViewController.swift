@@ -9,15 +9,16 @@
 import UIKit
 
 class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
-    var options = ["Add Employees","View Employees","View Orders","Employee Ratings"]
+    var options = ["Add Employees","View Employees","View Orders","Employee Ratings", "Add Products","View Products"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tblForMenu.dequeueReusableCell(withIdentifier: "cellForOptions")
-        cell?.textLabel = options.
+        let cell = tblForMenu.dequeueReusableCell(withIdentifier: "cellForMenuOptions")
+        cell?.textLabel?.text = options[indexPath.row]
+        return cell!
     }
     
 
@@ -32,6 +33,10 @@ class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+        tblForMenu.delegate = self
+        tblForMenu.dataSource = self
+        
         let delegate = UIApplication.shared.delegate as! AppDelegate
         txtDetailsFor.text = "Details For \(delegate.selectedEnterpriseForDetailByOwner!.enterpriseName)"
         txtEName.text = delegate.selectedEnterpriseForDetailByOwner!.enterpriseName
