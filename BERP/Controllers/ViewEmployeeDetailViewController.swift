@@ -8,8 +8,21 @@
 
 import UIKit
 
-class ViewEmployeeDetailViewController: UIViewController {
+class ViewEmployeeDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return delegate!.selectedEnterpriseForDetailByOwner!.getOrdersOfEmployee(with: delegate!.selectedEmployeeForDetailByOwner!).count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tblView.dequeueReusableCell(withIdentifier: "cellForOrder")
+        
+        cell?.textLabel!.text = "\(delegate!.selectedEnterpriseForDetailByOwner!.getOrdersOfEmployee(with: delegate!.selectedEmployeeForDetailByOwner!)[indexPath.row])"
+        return cell!
+        
+    }
+    
 
+    @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var lblBrandName: UILabel!
     @IBOutlet weak var lblWorkingLocation: UILabel!
     @IBOutlet weak var lblFullName: UILabel!
@@ -20,6 +33,9 @@ class ViewEmployeeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        tblView.delegate = self
+        tblView.dataSource = self
         delegate = (UIApplication.shared.delegate as! AppDelegate)
         
         lblBrandName.text = delegate!.selectedEnterpriseForDetailByOwner?.enterpriseName
