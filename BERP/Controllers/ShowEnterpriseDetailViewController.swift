@@ -8,7 +8,18 @@
 
 import UIKit
 
-class ShowEnterpriseDetailViewController: UIViewController {
+class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+    var options = ["Add Employees","View Employees","View Orders","Employee Ratings"]
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return options.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tblForMenu.dequeueReusableCell(withIdentifier: "cellForOptions")
+        cell?.textLabel = options.
+    }
+    
 
     @IBOutlet weak var txtEAddress: UILabel!
     @IBOutlet weak var txtEName: UILabel!
@@ -46,7 +57,7 @@ class ShowEnterpriseDetailViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
             [weak alert] (_) in
             let delegate = UIApplication.shared.delegate as! AppDelegate
-            delegate.selectedEnterpriseForDetailByOwner?.bonusMultiplier = Int((alert?.textFields![0].text! as? NSString)!.intValue)
+            delegate.selectedEnterpriseForDetailByOwner?.bonusMultiplier = Int((alert?.textFields![0].text! as NSString?)!.intValue)
             self.txtEBonusMultiplier.setTitle("\(delegate.selectedEnterpriseForDetailByOwner!.bonusMultiplier)", for: .normal)
         }))
             self.present(alert, animated: true)
