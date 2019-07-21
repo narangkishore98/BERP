@@ -34,6 +34,8 @@
 		2E826B4722E3CA3900B4735D /* ViewEnterpriseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B4622E3CA3900B4735D /* ViewEnterpriseTableViewController.swift */; };
 		2E826B4922E3D1EB00B4735D /* ShowEnterpriseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B4822E3D1EB00B4735D /* ShowEnterpriseDetailViewController.swift */; };
 		2E826B4B22E42B1800B4735D /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B4A22E42B1800B4735D /* AddEmployeeViewController.swift */; };
+		2E826B4D22E4B6A800B4735D /* ViewEmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B4C22E4B6A800B4735D /* ViewEmployeeTableViewController.swift */; };
+		2E826B4F22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B4E22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift */; };
 		8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60422E2476B0010FB6F /* ContactUsViewController.swift */; };
 		8451F60722E24C1F0010FB6F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60622E24C1F0010FB6F /* EmailViewController.swift */; };
 		8451F60922E257C90010FB6F /* SmsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60822E257C90010FB6F /* SmsCallViewController.swift */; };
@@ -72,6 +74,8 @@
 		2E826B4622E3CA3900B4735D /* ViewEnterpriseTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEnterpriseTableViewController.swift; sourceTree = "<group>"; };
 		2E826B4822E3D1EB00B4735D /* ShowEnterpriseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEnterpriseDetailViewController.swift; sourceTree = "<group>"; };
 		2E826B4A22E42B1800B4735D /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
+		2E826B4C22E4B6A800B4735D /* ViewEmployeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEmployeeTableViewController.swift; sourceTree = "<group>"; };
+		2E826B4E22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEmployeeDetailViewController.swift; sourceTree = "<group>"; };
 		8451F60422E2476B0010FB6F /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		8451F60622E24C1F0010FB6F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		8451F60822E257C90010FB6F /* SmsCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCallViewController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,8 @@
 				2E826B4622E3CA3900B4735D /* ViewEnterpriseTableViewController.swift */,
 				2E826B4822E3D1EB00B4735D /* ShowEnterpriseDetailViewController.swift */,
 				2E826B4A22E42B1800B4735D /* AddEmployeeViewController.swift */,
+				2E826B4C22E4B6A800B4735D /* ViewEmployeeTableViewController.swift */,
+				2E826B4E22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,6 +288,7 @@
 			files = (
 				2E826B2022E1E8C200B4735D /* DoubleExtension.swift in Sources */,
 				2E826B0022DFE84500B4735D /* User.swift in Sources */,
+				2E826B4F22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift in Sources */,
 				2E826B1322E0161200B4735D /* DataStore.swift in Sources */,
 				2E826B0F22DFF54900B4735D /* Employee.swift in Sources */,
 				8451F60722E24C1F0010FB6F /* EmailViewController.swift in Sources */,
@@ -300,6 +307,7 @@
 				8451F60922E257C90010FB6F /* SmsCallViewController.swift in Sources */,
 				8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */,
 				2E826B4122E2880B00B4735D /* AddEnterpriseViewController.swift in Sources */,
+				2E826B4D22E4B6A800B4735D /* ViewEmployeeTableViewController.swift in Sources */,
 				2E826B0422DFEB5D00B4735D /* Enterprise.swift in Sources */,
 				2E826AEA22DFE6EF00B4735D /* AppDelegate.swift in Sources */,
 				2E826B1C22E1E74A00B4735D /* StringExtension.swift in Sources */,

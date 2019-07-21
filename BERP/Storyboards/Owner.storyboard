@@ -333,10 +333,10 @@
             </objects>
             <point key="canvasLocation" x="2591" y="1199"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Employee View Controller-->
         <scene sceneID="J9s-d2-Xeb">
             <objects>
-                <viewController storyboardIdentifier="addEmployeeVC" id="Xh2-Bq-O3v" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addEmployeeVC" id="Xh2-Bq-O3v" customClass="AddEmployeeViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T62-zt-lXV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -368,15 +368,66 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="txtEmpAddress:" destination="Xh2-Bq-O3v" eventType="editingDidEnd" id="HHZ-On-9u4"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qsY-ca-i3b"/>
                     </view>
+                    <connections>
+                        <outlet property="txtEmpAddress" destination="4HY-Go-388" id="cuX-QM-Huy"/>
+                        <outlet property="txtEmpEmail" destination="VSk-61-eYm" id="ngC-Gg-aaz"/>
+                        <outlet property="txtEmpName" destination="VFd-on-ryo" id="f8i-Lu-hqe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J0w-aw-xtE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2589.8550724637685" y="1922.5446428571427"/>
+        </scene>
+        <!--View Employee Table View Controller-->
+        <scene sceneID="OEK-6w-moH">
+            <objects>
+                <tableViewController storyboardIdentifier="viewEmployeeVC" id="gjo-2O-rVM" customClass="ViewEmployeeTableViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BW4-w6-DBH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="employeeCell" id="QfN-ZT-qzw">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QfN-ZT-qzw" id="LJD-xE-h1W">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="gjo-2O-rVM" id="qDo-Be-Fgz"/>
+                            <outlet property="delegate" destination="gjo-2O-rVM" id="Bau-8p-rdl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YSS-K4-uw4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3433" y="1923"/>
+        </scene>
+        <!--View Employee Detail View Controller-->
+        <scene sceneID="rOk-Fz-BO3">
+            <objects>
+                <viewController storyboardIdentifier="viewEmployeeDetailVC" id="QJO-0J-VV6" customClass="ViewEmployeeDetailViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lZf-9t-T2h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="akW-eX-OfV"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YWs-TF-Ic0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4301" y="1928"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Akv-FW-X9Q">

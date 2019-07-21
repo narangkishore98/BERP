@@ -54,6 +54,8 @@ class Enterprise : DisplayDelegate
     }
     func addEmployee(employee:Employee)
     {
+       
+       employee.workingIn = self
         self.employees.append(employee)
         
     }

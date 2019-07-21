@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddEmployeeViewController: UIViewController {
+class AddEmployeeViewController: UIViewController  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +19,30 @@ class AddEmployeeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func txtEmpAddress(_ sender: Any) {
+    }
+    @IBOutlet weak var txtEmpEmail: UITextField!
+    @IBOutlet weak var txtEmpAddress: UITextField!
+    @IBOutlet weak var txtEmpName: UITextField!
     @objc func addEmployee()
     {
-        
+        if txtEmpName.text == "" || txtEmpEmail!.text == "" || txtEmpAddress.text == ""
+        {
+            let alertController = UIAlertController(title: "Error", message: "Please Fill All the values.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(action)
+            self.present(alertController, animated: true)
+        }
+        else
+        {
+            let password:String = "\(Int.random(in: 1000...9999))"
+            let employee = Employee(fullName: txtEmpName.text!, email: txtEmpEmail.text!, password: password, address: txtEmpAddress.text!)
+            
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            delegate.selectedEnterpriseForDetailByOwner?.addEmployee(employee: employee)
+            
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
 
