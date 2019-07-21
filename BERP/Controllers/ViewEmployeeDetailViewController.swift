@@ -33,6 +33,7 @@ class ViewEmployeeDetailViewController: UIViewController, UITableViewDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "Employee Details"
         
         tblView.delegate = self
         tblView.dataSource = self

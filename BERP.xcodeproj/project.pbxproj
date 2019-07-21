@@ -36,6 +36,7 @@
 		2E826B4B22E42B1800B4735D /* AddEmployeeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B4A22E42B1800B4735D /* AddEmployeeViewController.swift */; };
 		2E826B4D22E4B6A800B4735D /* ViewEmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B4C22E4B6A800B4735D /* ViewEmployeeTableViewController.swift */; };
 		2E826B4F22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B4E22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift */; };
+		2E826B5122E5032C00B4735D /* ViewOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B5022E5032C00B4735D /* ViewOrdersTableViewController.swift */; };
 		8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60422E2476B0010FB6F /* ContactUsViewController.swift */; };
 		8451F60722E24C1F0010FB6F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60622E24C1F0010FB6F /* EmailViewController.swift */; };
 		8451F60922E257C90010FB6F /* SmsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60822E257C90010FB6F /* SmsCallViewController.swift */; };
@@ -76,6 +77,7 @@
 		2E826B4A22E42B1800B4735D /* AddEmployeeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmployeeViewController.swift; sourceTree = "<group>"; };
 		2E826B4C22E4B6A800B4735D /* ViewEmployeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEmployeeTableViewController.swift; sourceTree = "<group>"; };
 		2E826B4E22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEmployeeDetailViewController.swift; sourceTree = "<group>"; };
+		2E826B5022E5032C00B4735D /* ViewOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOrdersTableViewController.swift; sourceTree = "<group>"; };
 		8451F60422E2476B0010FB6F /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		8451F60622E24C1F0010FB6F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		8451F60822E257C90010FB6F /* SmsCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCallViewController.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				2E826B4A22E42B1800B4735D /* AddEmployeeViewController.swift */,
 				2E826B4C22E4B6A800B4735D /* ViewEmployeeTableViewController.swift */,
 				2E826B4E22E4BF0A00B4735D /* ViewEmployeeDetailViewController.swift */,
+				2E826B5022E5032C00B4735D /* ViewOrdersTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				2E826B4122E2880B00B4735D /* AddEnterpriseViewController.swift in Sources */,
 				2E826B4D22E4B6A800B4735D /* ViewEmployeeTableViewController.swift in Sources */,
 				2E826B0422DFEB5D00B4735D /* Enterprise.swift in Sources */,
+				2E826B5122E5032C00B4735D /* ViewOrdersTableViewController.swift in Sources */,
 				2E826AEA22DFE6EF00B4735D /* AppDelegate.swift in Sources */,
 				2E826B1C22E1E74A00B4735D /* StringExtension.swift in Sources */,
 				2E826B0B22DFF16F00B4735D /* Product.swift in Sources */,
