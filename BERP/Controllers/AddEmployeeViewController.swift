@@ -12,8 +12,16 @@ class AddEmployeeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let doneButton = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(addEmployee))
+        
+        self.navigationItem.rightBarButtonItem = doneButton
+        self.navigationItem.title = "Add Employee"
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func addEmployee()
+    {
+        
     }
     
 
