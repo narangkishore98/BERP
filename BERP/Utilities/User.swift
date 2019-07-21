@@ -25,7 +25,7 @@ class User:DisplayDelegate
     var userID:Int
     var email:String
     var fullName:String
-    private var password:String
+    var password:String
     var userType:UserType
     var address:String
     
