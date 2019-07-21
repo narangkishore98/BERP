@@ -22,4 +22,5 @@ class Owner : User
     {
         return myEnterprises
     }
+    
 }

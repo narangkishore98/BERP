@@ -22,7 +22,15 @@ class Enterprise : DisplayDelegate
         Address: \(address)
         """
     }
-    
+    func getMaxIncome() -> Float
+    {
+        var income:Float = 0
+        for order in orders
+        {
+            income += order.totalPrice
+        }
+        return income
+    }
     private static var _enterpriseID:Int = 0
     var enterpriseID:Int
     var enterpriseName:String

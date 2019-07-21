@@ -61,6 +61,10 @@ class ViewEnterpriseTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let delegate = UIApplication.shared.delegate as! AppDelegate
+        let storyboard = UIStoryboard(name: "Owner", bundle: nil)
+        delegate.selectedEnterpriseForDetailByOwner = delegate.loggedInOwner?.getAllEnterprises()[indexPath.row]
+        let showEnterpriseDetailVC = storyboard.instantiateViewController(withIdentifier: "showEnterpriseDetailVC")
+        self.navigationController?.pushViewController(showEnterpriseDetailVC, animated: true)
     }
 
     /*
