@@ -31,7 +31,7 @@ class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate
             let delegate = UIApplication.shared.delegate as! AppDelegate
             if delegate.selectedEnterpriseForDetailByOwner!.getEmployees().count == 0
             {
-                let alert = UIAlertController(title: "No Employees Available", message: "No Employees available to show. Please add a enterprise to start.", preferredStyle: .alert)
+                let alert = UIAlertController(title: "No Employees Available", message: "No Employees available to show. Please add a Employee to start.", preferredStyle: .alert)
                 let actionButton = UIAlertAction(title: "OK", style: .default, handler: nil)
                 alert.addAction(actionButton)
                 self.present(alert, animated: true)
@@ -41,6 +41,24 @@ class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate
                 let viewEmployeeVC = storyboard.instantiateViewController(withIdentifier: "viewEmployeeVC")
                 self.navigationController?.pushViewController(viewEmployeeVC, animated: true)
             }
+        case 4:
+            let addProductVC = storyboard.instantiateViewController(withIdentifier: "addProductVC")
+            self.navigationController?.pushViewController(addProductVC, animated: true)
+        case 5:
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            if delegate.selectedEnterpriseForDetailByOwner!.getAllProducts().count == 0
+            {
+                let alert = UIAlertController(title: "No Products Available", message: "No Products available to show. Please add a Product to start.", preferredStyle: .alert)
+                let actionButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(actionButton)
+                self.present(alert, animated: true)
+            }
+            else
+            {
+                let viewProductsVC = storyboard.instantiateViewController(withIdentifier: "viewProductsVC")
+                self.navigationController?.pushViewController(viewProductsVC, animated: true)
+            }
+
         default:
             print("Nothing to do here.")
         }
