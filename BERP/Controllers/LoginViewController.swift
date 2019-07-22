@@ -55,8 +55,8 @@ class LoginViewController: UIViewController {
                             userDefault.removeObject(forKey: "userPassword")
                         }
                         
-                        let ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
-                        let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "startFromOwnerVC")
+                        let ownerStoryBoard = UIStoryboard(name: "Employee", bundle: nil)
+                        let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "startFromEmployeeVC")
                         self.present(ownerHomeVC, animated: true)
                        
                     }
@@ -114,7 +114,21 @@ class LoginViewController: UIViewController {
                 }
             */
             }
-            else if (mytxtEmail == )
+            else if let validEmployee = Int(mytxtEmail)
+            {
+                if let employee = DataStore.employees[validEmployee]
+                {
+                    if employee.doLogin(password: mytxtPassword)
+                    {
+                        
+                    }
+                    else
+                    {
+                        print("User Invalid Password")
+                        showMyAlertMessage(title: "Employee Error", message: "Invalid Password", btnTitle: "Ok")
+                    }
+                }
+            }
             else
             {
                 //Email is Not Valid

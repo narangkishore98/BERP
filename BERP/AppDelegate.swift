@@ -12,10 +12,16 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    //owner session variables
     var loggedInOwner:Owner?
     var selectedEnterpriseForDetailByOwner:Enterprise?
     var selectedEmployeeForDetailByOwner:Employee?
+    
+    //Employee session variables.
+    var loggedInEmployee:Employee?
+    
+    
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
