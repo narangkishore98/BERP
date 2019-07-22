@@ -185,6 +185,7 @@
 		2E826B2A22E210E000B4735D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2E826AF222DFE6F000B4735D /* LaunchScreen.storyboard */,
 				2E826AEB22DFE6EF00B4735D /* LoginViewController.swift */,
 				84F6698722E0D542005E92B4 /* InstructionsViewController.swift */,
 				8451F60422E2476B0010FB6F /* ContactUsViewController.swift */,
@@ -211,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				2E826AED22DFE6EF00B4735D /* Main.storyboard */,
-				2E826AF222DFE6F000B4735D /* LaunchScreen.storyboard */,
 				2E826B4222E3AA2700B4735D /* Owner.storyboard */,
 				2E826B5C22E5608200B4735D /* Employee.storyboard */,
 			);

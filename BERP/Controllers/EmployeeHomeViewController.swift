@@ -10,9 +10,20 @@ import UIKit
 
 class EmployeeHomeViewController: UIViewController {
 
+    @IBOutlet weak var optionToChoose: UISegmentedControl!
+    @IBOutlet weak var lblWorkingFor: UILabel!
+    @IBOutlet weak var lblWelcome: UILabel!
+    @IBOutlet weak var lblAt: UILabel!
+    let delegate = UIApplication.shared.delegate as? AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        
+        lblWelcome.text = "Welcome \(delegate!.loggedInEmployee?.fullName)"
+        
+        lblWorkingFor.text = delegate!.loggedInEmployee!.workingIn.enterpriseName
+        
+        lblAt.text = delegate!.loggedInEmployee!.workingIn.address
         // Do any additional setup after loading the view.
     }
     
