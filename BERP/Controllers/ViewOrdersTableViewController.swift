@@ -33,15 +33,18 @@ class ViewOrdersTableViewController: UITableViewController {
         return (delegate.selectedEnterpriseForDetailByOwner?.getAllOrders().count)!
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellForOrder", for: indexPath)
+        let order = delegate.selectedEnterpriseForDetailByOwner?.getAllOrders()[indexPath.row]
+        
+        cell.textLabel?.text = "Order ID: \(order!.orderID)"
+        cell.detailTextLabel?.text = "Total Payment: \(order!.totalPrice.dollar())"
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
