@@ -65,6 +65,13 @@ class AddProductViewController: UIViewController, UIPickerViewDelegate, UIPicker
             alertController.addAction(action)
             self.present(alertController, animated: true)
         }
+        else if Float(txtPPrice.text!) == nil || Int(txtBarcode.text!) == nil
+        {
+            let alertController = UIAlertController(title: "Error", message: "Please Fill All the values in correct Format.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(action)
+            self.present(alertController, animated: true)
+        }
         else
         {
             

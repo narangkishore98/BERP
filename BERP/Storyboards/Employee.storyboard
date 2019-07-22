@@ -230,7 +230,7 @@
         <!--View Employee Orders Table View Controller-->
         <scene sceneID="PPp-9v-O22">
             <objects>
-                <tableViewController id="gQz-vz-Ofm" customClass="ViewEmployeeOrdersTableViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="viewOrderVC" id="gQz-vz-Ofm" customClass="ViewEmployeeOrdersTableViewController" customModule="BERP" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tpO-s9-JUL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

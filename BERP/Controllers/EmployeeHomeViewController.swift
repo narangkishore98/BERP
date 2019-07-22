@@ -19,6 +19,7 @@ class EmployeeHomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         lblScore.text = "\(delegate!.loggedInEmployee!.points)"
+        print(delegate?.loggedInEmployee!.points)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,9 +44,10 @@ class EmployeeHomeViewController: UIViewController {
             let vc = storyboard.instantiateViewController(withIdentifier: "makeOrderVC")
             self.navigationController?.pushViewController(vc, animated: true)
         }
-        else
+        else if options.selectedSegmentIndex == 1
         {
-            
+            let vc = storyboard.instantiateViewController(withIdentifier: "viewOrderVC")
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     /*

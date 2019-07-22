@@ -9,12 +9,18 @@
 import UIKit
 
 class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate, UITableViewDataSource{
+    
+    let delegate = UIApplication.shared.delegate as! AppDelegate
     var options = ["Add Employees","View Employees","View Orders","Employee Ratings", "Add Products","View Products"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return options.count
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        txtECount.text = "\(delegate.selectedEnterpriseForDetailByOwner!.getEmployees().count)"
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tblForMenu.dequeueReusableCell(withIdentifier: "cellForMenuOptions")
         cell?.textLabel?.text = options[indexPath.row]
