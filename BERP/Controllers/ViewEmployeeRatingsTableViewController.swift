@@ -40,7 +40,7 @@ class ViewEmployeeRatingsTableViewController: UITableViewController {
         cell.textLabel!.text = "\((UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom()[indexPath.row].fullName) - \((UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom()[indexPath.row].userID)"
         
         
-        cell.detailTextLabel.text = "Points: \((UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom()[indexPath.row].points)"
+        cell.detailTextLabel!.text = "Points: \((UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom()[indexPath.row].points)"
         if indexPath.row==0 || indexPath.row==1 || indexPath.row==2
         {
             cell.imageView!.image = UIImage(named: "gold-star")

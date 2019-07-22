@@ -48,6 +48,13 @@ class ViewProductsTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let product = (UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner?.getAllProducts()[indexPath.row]
+        
+        let alertController = UIAlertController(title: "Product Information", message: "Product Name: \(product!.name)\nPrice: \(product!.price)\nDescription:\(product!.description)\nBarcode\(product!.barcode)", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertController,animated: true)
+    }
 
     /*
     // Override to support conditional editing of the table view.
