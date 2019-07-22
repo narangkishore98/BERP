@@ -30,7 +30,11 @@ class InstructionsViewController: UIViewController, WKUIDelegate, WKNavigationDe
         let request = URLRequest(url: url!)
         wkWebView.load(request)
     }
-    
+    @IBAction func actionGoToHome(_ sender: Any)
+    {
+        self.dismiss(animated: true, completion: {})
+        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
     /*
      // MARK: - Navigation
      
