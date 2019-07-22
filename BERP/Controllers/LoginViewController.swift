@@ -114,7 +114,7 @@ class LoginViewController: UIViewController {
                 }
             */
             }
- 
+            else if (mytxtEmail == )
             else
             {
                 //Email is Not Valid

@@ -10,6 +10,18 @@ import Foundation
 class DataStore
 {
     static var owners:[String:Owner] = [String:Owner]()
+    static var employees:[Int:Employee] = [Int:Employee]()
+//    static func getAllEmployees() -> [Employee]
+//    {
+//        var empArray = [Employee]()
+//        for (_,owner) in owners
+//        {
+//            for enterprise in owner.getAllEnterprises()
+//            {
+//                for employee in enterprise.getEmployees()
+//            }
+//        }
+//    }
     static func readOwnersFromPlist()
     {
         let url = Bundle.main.url(forResource: "Owners", withExtension: "plist")

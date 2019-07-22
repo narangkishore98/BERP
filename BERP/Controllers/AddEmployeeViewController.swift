@@ -40,7 +40,7 @@ class AddEmployeeViewController: UIViewController  {
             
             let delegate = UIApplication.shared.delegate as! AppDelegate
             delegate.selectedEnterpriseForDetailByOwner?.addEmployee(employee: employee)
-            
+            DataStore.employees.updateValue(employee, forKey: employee.userID)
             self.navigationController?.popViewController(animated: true)
         }
     }
