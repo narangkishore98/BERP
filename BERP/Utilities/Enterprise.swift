@@ -114,4 +114,18 @@ class Enterprise : DisplayDelegate
         return newEmployees
     }
     
+    func getOrdersOfEmployee(withEmployee employee:Employee) -> [Order]
+    {
+        var tempOrder = [Order]()
+        for order in orders
+        {
+            if order.orderMadeBy.userID == employee.userID
+            {
+                tempOrder.append(order)
+            }
+            
+        }
+        return tempOrder
+    }
+    
 }
