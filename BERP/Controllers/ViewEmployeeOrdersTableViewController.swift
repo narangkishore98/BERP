@@ -10,6 +10,8 @@ import UIKit
 
 class ViewEmployeeOrdersTableViewController: UITableViewController {
 
+    
+    var delegate = UIApplication.shared.delegate as! AppDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,23 +26,28 @@ class ViewEmployeeOrdersTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return  delegate.loggedInEmployee!.workingIn!.getOrdersOfEmployee(withEmployee: delegate.loggedInEmployee!).count
+        
+        
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cellForOrder", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel!.text = "Order ID: \(delegate.loggedInEmployee!.workingIn.getOrdersOfEmployee(withEmployee: delegate.loggedInEmployee!)[indexPath.row].orderID)"
+        
+        cell.detailTextLabel!.text = delegate.loggedInEmployee!.workingIn.getOrdersOfEmployee(withEmployee: delegate.loggedInEmployee!)[indexPath.row].totalPrice.dollar()
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

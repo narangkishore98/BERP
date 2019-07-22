@@ -62,7 +62,11 @@ class MakeOrderViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBAction func placeOrder(_ sender: Any) {
         
         let order = Order(products: delegate.productsInOrder, madeBy: delegate.loggedInEmployee!, discount: nil)
+        
+        order.dateTime = Date()
         delegate.loggedInEmployee?.workingIn.addOrder(order: order)
+        
+        
         delegate.productsInOrder.removeAll()
         self.navigationController?.popViewController(animated: true)
     }

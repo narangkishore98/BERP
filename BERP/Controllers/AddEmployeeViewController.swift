@@ -33,6 +33,13 @@ class AddEmployeeViewController: UIViewController  {
             alertController.addAction(action)
             self.present(alertController, animated: true)
         }
+        else if txtEmpEmail!.text!.isValidEmail()
+        {
+            let alertController = UIAlertController(title: "Error", message: "Invalid Email.", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertController.addAction(action)
+            self.present(alertController, animated: true)
+        }
         else
         {
             let password:String = "\(Int.random(in: 1000...9999))"
