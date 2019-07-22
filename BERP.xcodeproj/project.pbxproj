@@ -44,6 +44,7 @@
 		2E826B5F22E5625300B4735D /* EmployeeHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E826B5E22E5625300B4735D /* EmployeeHomeViewController.swift */; };
 		2EABDD6022E6139700B931D9 /* MakeOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABDD5F22E6139700B931D9 /* MakeOrderViewController.swift */; };
 		2EABDD6222E6181200B931D9 /* AddProductTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABDD6122E6181200B931D9 /* AddProductTableViewController.swift */; };
+		2EABDD6422E6284000B931D9 /* ViewEmployeeOrdersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EABDD6322E6284000B931D9 /* ViewEmployeeOrdersTableViewController.swift */; };
 		8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60422E2476B0010FB6F /* ContactUsViewController.swift */; };
 		8451F60722E24C1F0010FB6F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60622E24C1F0010FB6F /* EmailViewController.swift */; };
 		8451F60922E257C90010FB6F /* SmsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60822E257C90010FB6F /* SmsCallViewController.swift */; };
@@ -92,6 +93,7 @@
 		2E826B5E22E5625300B4735D /* EmployeeHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeHomeViewController.swift; sourceTree = "<group>"; };
 		2EABDD5F22E6139700B931D9 /* MakeOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeOrderViewController.swift; sourceTree = "<group>"; };
 		2EABDD6122E6181200B931D9 /* AddProductTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductTableViewController.swift; sourceTree = "<group>"; };
+		2EABDD6322E6284000B931D9 /* ViewEmployeeOrdersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewEmployeeOrdersTableViewController.swift; sourceTree = "<group>"; };
 		8451F60422E2476B0010FB6F /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		8451F60622E24C1F0010FB6F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		8451F60822E257C90010FB6F /* SmsCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCallViewController.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				2E826B5E22E5625300B4735D /* EmployeeHomeViewController.swift */,
 				2EABDD5F22E6139700B931D9 /* MakeOrderViewController.swift */,
 				2EABDD6122E6181200B931D9 /* AddProductTableViewController.swift */,
+				2EABDD6322E6284000B931D9 /* ViewEmployeeOrdersTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				2E826B4522E3BD3700B4735D /* UINavigationControllerExtension.swift in Sources */,
 				84F6698822E0D542005E92B4 /* InstructionsViewController.swift in Sources */,
 				2E826B5522E511BA00B4735D /* ViewProductsTableViewController.swift in Sources */,
+				2EABDD6422E6284000B931D9 /* ViewEmployeeOrdersTableViewController.swift in Sources */,
 				2E826B3322E2753500B4735D /* OwnerHomeViewController.swift in Sources */,
 				84AF6A3F22E367B5001B75AE /* RegisterViewController.swift in Sources */,
 				CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */,

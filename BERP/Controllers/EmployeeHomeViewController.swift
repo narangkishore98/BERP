@@ -13,8 +13,13 @@ class EmployeeHomeViewController: UIViewController {
     @IBOutlet weak var optionToChoose: UISegmentedControl!
     @IBOutlet weak var lblWorkingFor: UILabel!
     @IBOutlet weak var lblWelcome: UILabel!
+    @IBOutlet weak var lblScore: UILabel!
     @IBOutlet weak var lblAt: UILabel!
     let delegate = UIApplication.shared.delegate as? AppDelegate
+    
+    override func viewWillAppear(_ animated: Bool) {
+        lblScore.text = "\(delegate!.loggedInEmployee!.points)"
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
