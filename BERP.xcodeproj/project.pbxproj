@@ -45,6 +45,7 @@
 		8451F60522E2476B0010FB6F /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60422E2476B0010FB6F /* ContactUsViewController.swift */; };
 		8451F60722E24C1F0010FB6F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60622E24C1F0010FB6F /* EmailViewController.swift */; };
 		8451F60922E257C90010FB6F /* SmsCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8451F60822E257C90010FB6F /* SmsCallViewController.swift */; };
+		845460AE22E60A7600E971B5 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845460AD22E60A7600E971B5 /* AboutUsViewController.swift */; };
 		84AF6A3F22E367B5001B75AE /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84AF6A3E22E367B5001B75AE /* RegisterViewController.swift */; };
 		84F6698822E0D542005E92B4 /* InstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F6698722E0D542005E92B4 /* InstructionsViewController.swift */; };
 		CEFB89DF22DFF86B00F0B344 /* Discount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEFB89DE22DFF86B00F0B344 /* Discount.swift */; };
@@ -91,6 +92,7 @@
 		8451F60422E2476B0010FB6F /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		8451F60622E24C1F0010FB6F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		8451F60822E257C90010FB6F /* SmsCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmsCallViewController.swift; sourceTree = "<group>"; };
+		845460AD22E60A7600E971B5 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		84AF6A3E22E367B5001B75AE /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		84F6698722E0D542005E92B4 /* InstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionsViewController.swift; sourceTree = "<group>"; };
 		CEFB89DE22DFF86B00F0B344 /* Discount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discount.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				2E826B5422E511BA00B4735D /* ViewProductsTableViewController.swift */,
 				2E826B5622E52FE900B4735D /* ViewEmployeeRatingsTableViewController.swift */,
 				2E826B5E22E5625300B4735D /* EmployeeHomeViewController.swift */,
+				845460AD22E60A7600E971B5 /* AboutUsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				2E826AEA22DFE6EF00B4735D /* AppDelegate.swift in Sources */,
 				2E826B1C22E1E74A00B4735D /* StringExtension.swift in Sources */,
 				2E826B0B22DFF16F00B4735D /* Product.swift in Sources */,
+				845460AE22E60A7600E971B5 /* AboutUsViewController.swift in Sources */,
 				2E826B4B22E42B1800B4735D /* AddEmployeeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
