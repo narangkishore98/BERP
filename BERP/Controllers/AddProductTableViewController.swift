@@ -38,13 +38,48 @@ class AddProductTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellForProduct", for: indexPath)
 
-        cell.textLabel.text = delegate
+        cell.textLabel!.text = " \(delegate.loggedInEmployee!.workingIn.getAllProducts()[indexPath.row].name) - \(delegate.loggedInEmployee!.workingIn.getAllProducts()[indexPath.row].productID)"
         
         // Configure the cell...
 
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let alert = UIAlertController(title: "Add Product", message: "Enter The Product Count", preferredStyle: .alert)
+        alert.addTextField { (txtField) in
+            txtField.placeholder = "Product Qty."
+            txtField.keyboardType = .numberPad
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: {
+            [weak alert] (_) in
+            
+            if alert!.textFields![0].text! == ""
+            {
+                let error = UIAlertController(title: "Error", message: "Please Choose a valid qty.", preferredStyle: .alert)
+                error.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            }
+            else if let numberOfTimes = Int(alert!.textFields![0].text!)
+            {
+                for _ in 0..<numberOfTimes
+                {
+                    self.delegate.productsInOrder.append((self.delegate.loggedInEmployee?.workingIn.getAllProducts()[indexPath.row])!)
+                    
+                   }
+                self.navigationController?.popViewController(animated: true)
+            
+            }
+            else
+            {
+                self.delegate.productsInOrder.append((self.delegate.loggedInEmployee?.workingIn.getAllProducts()[indexPath.row])!)
+                self.navigationController?.popViewController(animated: true)
+            }
+        }))
+        self.present(alert, animated: true)
+        
+    }
 
     /*
     // Override to support conditional editing of the table view.
