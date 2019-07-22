@@ -55,8 +55,9 @@ class LoginViewController: UIViewController {
                             userDefault.removeObject(forKey: "userPassword")
                         }
                         
-                        let ownerStoryBoard = UIStoryboard(name: "Employee", bundle: nil)
-                        let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "startFromEmployeeVC")
+                        let ownerStoryBoard = UIStoryboard(name: "Owner", bundle: nil)
+                        let ownerHomeVC = ownerStoryBoard.instantiateViewController(withIdentifier: "startFromOwnerVC")
+                       
                         self.present(ownerHomeVC, animated: true)
                        
                     }
@@ -120,7 +121,27 @@ class LoginViewController: UIViewController {
                 {
                     if employee.doLogin(password: mytxtPassword)
                     {
+                        let delegate = UIApplication.shared.delegate as? AppDelegate
+                        delegate?.loggedInEmployee = employee
                         
+                        //Remember Me code for user Default
+                        let userDefault = UserDefaults.standard
+                        if switchRememberMe.isOn
+                        {
+                            
+                            userDefault.setValue(txtEmail.text, forKey: "userEmail")
+                            userDefault.set(txtPassword.text, forKey: "userPassword")
+                        }
+                        else
+                        {
+                            userDefault.removeObject(forKey: "userEmail")
+                            userDefault.removeObject(forKey: "userPassword")
+                        }
+                        
+                        let employeeStoryboard = UIStoryboard(name: "Employee", bundle: nil)
+                        let employeHomeVC = employeeStoryboard.instantiateViewController(withIdentifier: "startFromEmployeeVC")
+                        
+                        self.present(employeHomeVC, animated: true)
                     }
                     else
                     {
