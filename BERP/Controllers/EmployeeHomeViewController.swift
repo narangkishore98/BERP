@@ -19,15 +19,30 @@ class EmployeeHomeViewController: UIViewController {
         super.viewDidLoad()
         
         
-        lblWelcome.text = "Welcome \(delegate!.loggedInEmployee?.fullName)"
+        lblWelcome.text = "Welcome \(delegate!.loggedInEmployee!.fullName)"
         
         lblWorkingFor.text = delegate!.loggedInEmployee!.workingIn.enterpriseName
         
         lblAt.text = delegate!.loggedInEmployee!.workingIn.address
         // Do any additional setup after loading the view.
+        self.navigationItem.title = "Employee Home"
     }
     
-
+    @IBOutlet weak var options: UISegmentedControl!
+    
+    @IBAction func btnGo(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Employee", bundle: nil)
+        if options.selectedSegmentIndex == 0
+        {
+            let vc = storyboard.instantiateViewController(withIdentifier: "makeOrderVC")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else
+        {
+            
+        }
+    }
     /*
     // MARK: - Navigation
 
