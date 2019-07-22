@@ -41,6 +41,20 @@ class ShowEnterpriseDetailViewController: UIViewController , UITableViewDelegate
                 let viewEmployeeVC = storyboard.instantiateViewController(withIdentifier: "viewEmployeeVC")
                 self.navigationController?.pushViewController(viewEmployeeVC, animated: true)
             }
+        case 3:
+            let delegate = UIApplication.shared.delegate as! AppDelegate
+            if delegate.selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom().count == 0
+            {
+                let alert = UIAlertController(title: "No Employees Available", message: "No Employees available to show. Please add a Employee to start.", preferredStyle: .alert)
+                let actionButton = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(actionButton)
+                self.present(alert, animated: true)
+            }
+            else
+            {
+                let viewEmployeeVC = storyboard.instantiateViewController(withIdentifier: "employeeRatingsVC")
+                self.navigationController?.pushViewController(viewEmployeeVC, animated: true)
+            }
         case 4:
             let addProductVC = storyboard.instantiateViewController(withIdentifier: "addProductVC")
             self.navigationController?.pushViewController(addProductVC, animated: true)

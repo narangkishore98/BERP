@@ -107,9 +107,11 @@ class Enterprise : DisplayDelegate
         }
         return tempOrders
     }
-    func getEmployeesTopToBottom()
+    func getEmployeesTopToBottom() -> [Employee]
     {
-        return employees.sort(by: {(e1,e2) in e1.points>e2.points})
+        var newEmployees = employees
+         newEmployees.sort(by: {(e1,e2) in e1.points>e2.points})
+        return newEmployees
     }
     
 }

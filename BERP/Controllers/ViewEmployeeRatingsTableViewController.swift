@@ -24,23 +24,35 @@ class ViewEmployeeRatingsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom().count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "employeeCell", for: indexPath)
 
         // Configure the cell...
-
+        cell.textLabel!.text = "\((UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom()[indexPath.row].fullName) - \((UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom()[indexPath.row].userID)"
+        
+        
+        cell.detailTextLabel.text = "Points: \((UIApplication.shared.delegate as! AppDelegate).selectedEnterpriseForDetailByOwner!.getEmployeesTopToBottom()[indexPath.row].points)"
+        if indexPath.row==0 || indexPath.row==1 || indexPath.row==2
+        {
+            cell.imageView!.image = UIImage(named: "gold-star")
+        }
+        else
+        {
+            cell.imageView!.image = UIImage(named:"grey-star")
+        }
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
